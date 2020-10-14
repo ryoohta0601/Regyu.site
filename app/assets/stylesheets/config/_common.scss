@@ -7,9 +7,14 @@ a:hover{
   text-decoration: none;
 }
 
+ul{
+  list-style: none;
+}
+
 .inner{
   height: 100%;
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
+  color: $color-white;
 }
