@@ -1,2 +1,41 @@
 <%= render partial: 'shared/header' %>
+  <main class="main">
+    <div class="main-topic">
+      <div class="main-topic__title">
+        <h2>本気で美味しいお肉を追い求めて。</h2>
+      </div>
+    </div>
+    <div class="main-inner">
+      <h2 class="main-inner__title"><span>Regyu.site</span>とは？</h2>
+      <p class="main-inner__sub">極上の牛肉を追い求める人の極上の牛肉を追い求める人のためのRegyu（review）を届ける</p>
+      <ul class="main-inner__list">
+        <li>
+          <%= image_tag "review.jpg"%>
+          <h3><span>本気</span>のレビュー</h3>
+          <p>ユーザーがユーザーのためのレビューサイトのためリアルな口コミが見れる</p>
+        </li>
+        <li>
+          <%= image_tag "牛.jpg"%>
+          <h3><span>シンプル</span>な機能性</h3>
+          <p>使いやすさを第一に考えた機能と操作</p>
+        </li>
+        <li>
+          <%= image_tag "サーロイン.jpg"%>
+          <h3><span>熱い</span>気持ち</h3>
+          <p>焼肉への情熱だけは負けません！</p>
+        </li>
+      </ul>
+    </div>
+    <div class="second-topic">
+      <div class="second-topic__title">
+        <button type="button" class="btn btn-light">お試しログイン
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+  </main>
 <%= render partial: 'shared/footer' %>
