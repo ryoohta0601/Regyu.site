@@ -20,6 +20,17 @@ ul{
   color: $color-white;
 }
 
+.alert{
+  margin-bottom: 0;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
 
 // ログイン画面
 
@@ -38,3 +49,4 @@ ul{
 .alert-alert {
   @extend .alert-danger;
 }
+
