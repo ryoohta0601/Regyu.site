@@ -1,10 +1,10 @@
-.registrations-inner{
+.sessions-inner{
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
   .container{
     margin-top: 60px;
-    &-registration{
+    &-session{
       border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
       &__title{
         padding: 10px 20px;
@@ -16,19 +16,12 @@
         margin-right: 10px;
       }
       &__contents{
-        padding: 20px;
+        padding: 20px 240px;
         border: 1px solid rgba(0,0,0,0.125);
         margin-bottom: 40px;
-        .registration-table{
-          border: 1px solid rgba(0,0,0,0.125);
-          width: 80%;
-          margin: 0 auto;
-          margin-bottom: 20px;
-          th,td{
-            border: 1px solid rgba(0,0,0,0.125);
-            padding: 20px 10px;
-          }
-          td{
+        .field{
+          margin-bottom: 16px;
+          &-write{
             text-align: center;
             input{
               width: 100%;
@@ -42,6 +35,15 @@
           input{
             height: 40px;
             width: 120px;
+            background-color: $color-base;
+          }
+        }
+        .sample-signin{
+          text-align: center;
+          margin-bottom: 20px;
+          .btn{
+            font-size: 24px;
+            margin-top: 20px;
             background-color: $color-base;
           }
         }
