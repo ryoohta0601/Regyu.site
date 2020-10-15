@@ -3,11 +3,20 @@
     <%= link_to root_path, class: "header-inner-link" do%>
       <h1 class="header-title">Regyu.site</h1>
     <% end %>
-    <%= link_to new_user_session_path, class: "header-inner-link header-inner-signin" do%>
-      <i class="fas fa-sign-in-alt"></i>ログイン
-    <% end %>
-    <%= link_to new_user_registration_path, class: "header-inner-link header-inner-signup" do%>
-      <i class="fas fa-user-plus"></i>ユーザー登録
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "header-inner-link header-inner-destroy" do%>
+        <i class="fas fa-sign-out-alt"></i>ログアウト
+      <% end %>
+      <%= link_to "#", class: "header-inner-link header-inner-mypage" do%>
+        <i class="fas fa-user"></i>マイページ
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path, class: "header-inner-link header-inner-signin" do%>
+        <i class="fas fa-sign-in-alt"></i>ログイン
+      <% end %>
+      <%= link_to new_user_registration_path, class: "header-inner-link header-inner-signup" do%>
+        <i class="fas fa-user-plus"></i>ユーザー登録
+      <% end %>
     <% end %>
   </div>
 </header>
