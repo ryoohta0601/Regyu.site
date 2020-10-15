@@ -56,6 +56,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # bootstrap CSS
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 # icon
 gem 'font-awesome-sass'
+
+# signin
+gem 'devise'
+
+# Japanese
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
+gem 'devise-i18n-views'

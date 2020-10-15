@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "config/colors";
@@ -7,3 +8,5 @@
 @import "modules/nav";
 @import "modules/footer";
 @import "modules/toppages";
+@import "users/registrations";
+@import "users/new";
