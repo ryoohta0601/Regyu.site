@@ -1,3 +1,75 @@
-<%= render 'shared/flash_messages' %>
 <%= render partial: 'shared/header' %>
 <%= render partial: 'shared/nav' %>
+<%= render 'shared/flash_messages' %>
+<div class="inner mypage-inner">
+  <div class="mypage-container">
+    <div class="mypage-sidebar">
+      <div class="mypage-sidebar__nav-title">メニュー</div>
+      <ul class="mypage-sidebar__nav-items">
+        <%= link_to "#" do %>
+          <li>
+            <i class="fas fa-home"></i><span>ホーム</span>
+          </li>
+        <% end %>
+        <%= link_to "#" do %>
+          <li>
+            <i class="fas fa-pencil-alt"></i><span>レビュー</span>
+          </li>
+        <% end %>
+        <%= link_to "#" do %>
+          <li>
+            <i class="fas fa-bookmark"></i><span>ブックマーク</span>
+          </li>
+        <% end %>
+        <%= link_to "#" do %>
+          <li class="sidebar-last-child">
+            <i class="fas fa-calendar-alt"></i><span>イベント</span>
+          </li>
+        <% end %>
+      </ul>
+      <div class="mypage-sidebar__nav-title">アカウント管理</div>
+      <ul class="mypage-sidebar__nav-items">
+        <%= link_to "#" do %>
+          <li>
+            <i class="fas fa-user-circle"></i><span>プロフィール</span>
+          </li>
+        <% end %>
+        <%= link_to "#" do %>
+          <li>
+            <i class="fas fa-envelope"></i><span>メールアドレス</span>
+          </li>
+        <% end %>
+        <%= link_to "#" do %>
+          <li class="sidebar-last-child">
+            <i class="fas fa-lock"></i><span>パスワード</span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="mypage-contents">
+      <div class="mypage-contents__title">マイページ</div>
+      <div class="user">
+        <div class="user-image">
+          <%= image_tag "牛.jpg", height: "60px", width: "60px"%>
+          <h2>ユーザー名</h2>
+          <p>自己紹介文テスト</p>
+          <table>
+            <tr>
+              <th>投稿したレビュー</th>
+              <td>1件</td>
+            </tr>
+            <tr>
+              <th>お気に入りしたレビュー</th>
+              <td>1件</td>
+            </tr>
+            <tr>
+              <th>ブックマークした店</th>
+              <td>1件</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>
