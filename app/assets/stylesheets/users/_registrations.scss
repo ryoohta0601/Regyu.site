@@ -1,0 +1,51 @@
+.registrations-inner{
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  .container{
+    margin-top: 60px;
+    .container-registration{
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      &__title{
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: rgba(0,0,0,0.03);
+      }
+      i{
+        margin-right: 10px;
+      }
+      &__contents{
+        padding: 20px;
+        border: 1px solid rgba(0,0,0,0.125);
+        margin-bottom: 40px;
+        .registration-table{
+          border: 1px solid rgba(0,0,0,0.125);
+          width: 80%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          th,td{
+            border: 1px solid rgba(0,0,0,0.125);
+            padding: 20px 10px;
+          }
+          td{
+            text-align: center;
+            input{
+              width: 100%;
+              font-size: 16px;
+              padding: 8px;
+            }
+          }
+        }
+        .actions{
+          text-align: center;
+          input{
+            height: 40px;
+            width: 120px;
+            background-color: #dc3545;
+          }
+        }
+      }
+    }
+  }
+}
