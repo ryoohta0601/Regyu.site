@@ -1,0 +1,28 @@
+.nav-crumb{
+  height: 40px;
+  background-color: $color-font;
+  .nav-inner{
+    .nav-list{
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      li{
+        a{
+          color: $color-white;
+          i{
+            color: $color-white;
+            margin-right: 5px;
+          }
+        }
+      }
+      .review-index{
+        margin-right: 100px;
+      }
+      .rank-index{
+        margin-left: 100px;
+      }
+    }
+  }
+}
