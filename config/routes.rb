@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "toppages#index"
 
   resources :mypages, only: [:index]
+
+  resources :reviews, only: [:index]
 end
