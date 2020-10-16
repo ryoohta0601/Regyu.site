@@ -1,0 +1,195 @@
+.reviews-inner{
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  .container{
+    margin-top: 60px;
+    &-reviews__section1{
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      width: 100%;
+      .freeword-search__title{
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: rgba(0,0,0,0.03);
+      }
+      i{
+        margin-right: 10px;
+      }
+      .freeword-search__contents{
+        padding: 20px;
+        border: 1px solid rgba(0,0,0,0.125);
+        margin-bottom: 20px;
+        .input{
+          width: 75%;
+          font-size: 16px;
+          padding: 8px;
+          margin-right: 5px;
+        }
+        .btn{
+          border: none;
+          padding: 8px 20px;
+          background-color: $color-btn;
+        }
+      }
+    }
+    .display-container{
+      display: flex;
+      justify-content: space-between;
+      @include clearfix();
+      .container-reviews__section2{
+        border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+        width: 60%;
+        .area-search__title{
+          padding: 10px 20px;
+          font-size: 24px;
+          font-weight: bold;
+          background-color: rgba(0,0,0,0.03);
+          i{
+            margin-right: 10px;
+          }
+        }
+        .area-search__contents{
+          padding: 20px;
+          border: 1px solid rgba(0,0,0,0.125);
+          margin-bottom: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          .region{
+            width: 45%;
+            padding-bottom: 20px;
+            &-title{
+              font-size: 16px;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+            &-select{
+              font-size: 14px;
+              &-item{
+                margin-right: .7em;
+                margin-bottom: .7em;
+                display: inline-block;
+                a{
+                  margin-right: 7px;
+                  text-decoration: underline;
+                  color: $color-btn;
+                }
+              }
+            }
+          }
+        }
+      }
+      .container-reviews__section3{
+        border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+        margin-left: auto;
+        width: 35%;
+        .lately-restaurants__title{
+          padding: 10px 20px;
+          font-size: 24px;
+          font-weight: bold;
+          background-color: rgba(0,0,0,0.03);
+          i{
+            margin-right: 10px;
+          }
+        }
+        .lately-restaurants__contents{
+          padding: 32px;
+          border: 1px solid rgba(0,0,0,0.125);
+          margin-bottom: 20px;
+          .lately-restaurant__item{
+            margin-bottom: 20px;
+            .lately-restaurant__name{
+              padding: 8px;
+              border-bottom: 1px solid $color-font;
+            }
+          }
+        }
+      }
+    }
+    &-reviews__section4{
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      .reviews__title{
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: rgba(0,0,0,0.03);
+      }
+      .reviews__contents{
+        padding: 32px;
+        border: 1px solid rgba(0,0,0,0.125);
+        margin-bottom: 20px;
+        .review-content{
+          margin-top: 20px;
+          ul{
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li{
+              width: 100%;
+              margin-right: 10px;
+              border: 1px solid rgba(0,0,0,0.125);
+              margin-bottom: 16px;
+              position: relative;
+              .review-image{
+                width: 40%;
+                img{
+                  width: 100%;
+                  float: left;
+                }
+              }
+              .review-show{
+                width: 60%;
+                float: right;
+                h3{
+                  color: $color-btn;
+                  font-size: 24px;
+                  margin-left: 15px;
+                  margin-top: 15px;
+                  margin-bottom: 24px;
+                }
+                .review-subject{
+                  font-size: 16px;
+                  margin-left: 15px;
+                  border-bottom: 1px solid $color-font;
+                  margin-bottom: 40px;
+                }
+                .review-date{
+                  font-size: 12px;
+                  color: $color-base;
+                  margin-right: 15px;
+                  position: absolute;
+                  right: 60px;
+                  bottom: 20px;
+                }
+                .review-name{
+                  font-size: 16px;
+                  margin: 0 15px 5px 0;
+                  color: $color-base;
+                  position: absolute;
+                  bottom: 10px;
+                  right: 60px;
+                  padding: 0;
+                  .bi-pencil{
+                    margin-left: 5px;
+                  }
+                }
+                .user-image{
+                  position: absolute;
+                  display: block;
+                  right: 10px;
+                  bottom: 10px;
+                  img{
+                    border: 1px solid rgba(0,0,0,0.125);
+                    border-radius: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
