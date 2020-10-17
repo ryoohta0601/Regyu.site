@@ -1,0 +1,398 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner reviews-inner">
+  <div class="container">
+    <div class="container-restaurants__search">
+      <div class="restaurant-search__title">
+        <i class="fas fa-store-alt"></i>店舗を追加する
+      </div>
+      <div class="restaurant-search__content">
+        <button type="button" class="btn btn-info">
+          <i class="fas fa-edit"></i>追加する
+        </button>
+        <p>レビューしたい店舗情報がない場合は、こちらから店舗の追加をお願いします。</p>
+      </div>
+    </div>
+    <div class="container-reviews__section1">
+      <div class="freeword-search__title">
+        <i class="fas fa-file-alt"></i>フリーワードから探す
+      </div>
+      <div class="freeword-search__contents">
+        <%= form_with model: @review do |f| %>
+          <%= f.text_field :name_cont, placeholder: "地名・店名", class: 'input' %>
+          <button type="submit" class="btn btn-primary">検索</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="display-container">
+      <div class="container-reviews__section2">
+        <div class="area-search__title">
+          <i class="fas fa-map-marked-alt"></i>エリアから探す
+        </div>
+        <div class="area-search__contents">
+          <div class="region">
+            <h3 class="region-title">北海道</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  北海道
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">東北</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  青森県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  岩手県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  宮城県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  秋田県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  山形県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  福島県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">関東</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  茨城県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  栃木県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  群馬県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  埼玉県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  千葉県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  東京都
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  神奈川県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">北陸・甲信越</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  新潟県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  富山県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  石川県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  福井県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  山梨県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  長野県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">東海</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  岐阜県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  静岡県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  愛知県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  三重県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">関西</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  滋賀県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  京都府
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  大阪府
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  兵庫県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  奈良県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  和歌山県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">中国</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  鳥取県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  島根県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  岡山県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  広島県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  山口県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">四国</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  徳島県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  香川県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  愛媛県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  高知県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="region">
+            <h3 class="region-title">九州・沖縄</h3>
+            <ul class="region-select">
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  福岡県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  佐賀県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  長崎県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  熊本県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  大分県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  宮崎県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  鹿児島県
+                <% end %>
+              </li>
+              <li class="region-select-item">
+                <%= link_to "#" do%>
+                  沖縄県
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-reviews__section3">
+        <div class="lately-restaurants__title">
+          <i class="fas fa-store-alt"></i>最近チェックした店
+        </div>
+        <div class="lately-restaurants__contents">
+          <div class="lately-restaurant__item">
+            <div class="lately-restaurant__name">にくや萬野（大阪府）</div>
+          </div>
+          <div class="lately-restaurant__item">
+            <div class="lately-restaurant__name">にくや萬野（大阪府）</div>
+          </div>
+          <div class="lately-restaurant__item">
+            <div class="lately-restaurant__name">にくや萬野（大阪府）</div>
+          </div>
+          <div class="lately-restaurant__item">
+            <div class="lately-restaurant__name">にくや萬野（大阪府）</div>
+          </div>
+          <div class="lately-restaurant__item">
+            <div class="lately-restaurant__name">にくや萬野（大阪府）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-restaurants__section1">
+      <div class="restaurants-index__title">
+        <i class="fas fa-store-alt"></i>店舗一覧
+      </div>
+      <div class="restaurants-index__contents">
+        <div class="restaurant-index__content">
+          <ul>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>１位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>２位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>３位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>３位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>３位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>３位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+          </ul>
+          <div class="more-restaurants">
+            <%= link_to "#" do %>
+              >>もっと店舗を見る
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>
