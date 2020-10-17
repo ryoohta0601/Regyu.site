@@ -1,0 +1,77 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner rank-inner">
+  <div class="container">
+    <div class="container-popular__section1">
+      <div class="popular-rank__title">
+        <i class="fas fa-fire"></i>人気焼肉店Best3
+      </div>
+      <div class="popular-rank__contents">
+        <div class="popular-rank__content">
+          <ul>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>１位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>２位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <%= image_tag "サーロイン.jpg"%>
+                <h3>３位：にくや萬野（大阪）</h3>
+                <p>(1件のレビュー)</p>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-review__section2">
+      <div class="review-person__title">
+        <i class="fas fa-comments"></i>Regyuの投稿数が多いユーザーBest3
+      </div>
+      <div class="review-person__contents">
+        <div class="review-person__content">
+          <ul>
+            <li>
+              <%= link_to "#" do%>
+                <div class="user-image"><%= image_tag "サーロイン.jpg", height: "160px", width: "160px"%></div>
+                <div class="user-name">
+                  <h3>１位：にくや萬野（大阪）</h3>
+                  <p>(1件のレビュー)</p>
+                </div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <div class="user-image"><%= image_tag "サーロイン.jpg", height: "160px", width: "160px"%></div>
+                <div class="user-name">
+                  <h3>２位：にくや萬野（大阪）</h3>
+                  <p>(1件のレビュー)</p>
+                </div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do%>
+                <div class="user-image"><%= image_tag "サーロイン.jpg", height: "160px", width: "160px"%></div>
+                <div class="user-name">
+                  <h3>３位：にくや萬野（大阪）</h3>
+                  <p>(1件のレビュー)</p>
+                </div>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>
