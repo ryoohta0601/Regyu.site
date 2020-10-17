@@ -7,7 +7,7 @@
     margin-top: 60px;
     margin-bottom: 40px;
     .mypage-sidebar{
-      width: 280px;
+      width: 30%;
       float: left;
       border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
       &__nav-title{
@@ -44,7 +44,7 @@
       }
     }
     .mypage-contents{
-      width: 600px;
+      width: 60%;
       float: right;
       &__title{
         padding: 10px 20px;
