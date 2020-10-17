@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :mypages, only: [:index]
 
-  resources :reviews, only: [:index]
+  resources :reviews, only: [:index, :show]
 
   resources :restaurants, only: [:index]
   

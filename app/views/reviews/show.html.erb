@@ -1,0 +1,50 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner review-inner">
+  <div class="container">
+    <div class="container-review__title">
+      <i class="fas fa-file-alt"></i>Regyu詳細
+    </div>
+    <div class="container-review__content">
+      <div class="review-head">
+        <h2 class="review-title">極雌和牛を使った新鮮で質の高い店</h2>
+        <div class="restaurant-name">
+          <%= link_to "#" do%>
+            にくや萬野（大阪）
+          <% end %>
+        </div>
+        <%= link_to "#" do%>
+          <div class="user-name">サンプルname
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+            </svg>
+          </div>
+          <div class="user-image">
+            <%= image_tag "牛.jpg", height: "70px", width: "70px"%>
+          </div>
+        <% end %>
+        <div class="review-date">2020.01.01</div>
+      </div>
+      <div class="review-content">
+        <div class="review-content__image">
+          <%= image_tag "IMG_2620.JPG" %>
+        </div>
+        <div class="review-content__text">
+          テキスト
+          テキスト
+          テキスト
+          <br>
+          サンプル
+          サンプル
+          サンプル
+        </div>
+        <div class="review-sub__image">
+          <div class="sub-image"><%= image_tag "IMG_2621.JPG"%></div>
+          <div class="sub-image"><%= image_tag "IMG_2655.JPG"%></div>
+          <div class="sub-image"><%= image_tag "IMG_2656.JPG"%></div>
+          <div class="sub-image"><%= image_tag "サーロイン.jpg"%></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
