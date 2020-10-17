@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :reviews, only: [:index]
 
   resources :restaurants, only: [:index]
+  
+  resources :ranks, only: [:index]
 end
