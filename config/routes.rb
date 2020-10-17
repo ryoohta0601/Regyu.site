@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :mypages, only: [:index]
 
   resources :reviews, only: [:index]
+
+  resources :restaurants, only: [:index]
 end
