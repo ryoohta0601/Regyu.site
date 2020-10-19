@@ -7,7 +7,7 @@
       <%= link_to destroy_user_session_path, method: :delete, class: "header-inner-link header-inner-destroy" do%>
         <i class="fas fa-sign-out-alt"></i>ログアウト
       <% end %>
-      <%= link_to user_path, class: "header-inner-link header-inner-mypage" do%>
+      <%= link_to user_path(current_user), class: "header-inner-link header-inner-mypage" do%>
         <i class="fas fa-user"></i>マイページ
       <% end %>
     <% else %>

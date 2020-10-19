@@ -83,6 +83,37 @@
           }
         }
       }
+      &__content{
+        padding: 20px;
+        text-align: center;
+        border: 1px solid rgba(0,0,0,0.125);
+        clear: both;
+        table{
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          th{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+            text-align: left;
+          }
+          td{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+            input{
+              width: 100%;
+              font-size: 16px;
+              padding: 8px;
+            }
+          }
+        }
+        input[type="submit"]{
+          background-color: $color-btn;
+          color: $color-white;
+          padding: 8px 20px;
+        }
+      }
     }
   }
 }
