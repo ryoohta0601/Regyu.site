@@ -1,5 +1,6 @@
 <%= render partial: 'shared/header' %>
 <%= render partial: 'shared/nav' %>
+<% if user_signed_in? && @user == current_user %>
 <%= render 'shared/flash_messages' %>
 <div class="inner mypage-inner">
   <div class="mypage-container">
@@ -29,7 +30,7 @@
       </ul>
       <div class="mypage-sidebar__nav-title">アカウント管理</div>
       <ul class="mypage-sidebar__nav-items">
-        <%= link_to "#" do %>
+        <%= link_to edit_user_path(current_user) do %>
           <li>
             <i class="fas fa-user-circle"></i><span>プロフィール</span>
           </li>
@@ -72,4 +73,7 @@
     </div>
   </div>
 </div>
+<% else %>
+  <h1>ユーザーページ</h1>
+<% end %>
 <%= render partial: 'shared/footer' %>
