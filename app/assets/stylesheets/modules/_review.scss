@@ -31,6 +31,12 @@
         a{
           color: $color-font;
         }
+        a:hover{
+          opacity: 0.5;
+        }
+      }
+      a:hover{
+        opacity: 0.5;
       }
       .user-name{
         position: absolute;
@@ -150,7 +156,7 @@
         border-bottom: 1px solid $color-base;
         &-name{
           color: $color-font;
-          width: 85%;
+          width: 60%;
           float: left;
           line-height: 1.75;
           padding: 12px 0;
@@ -159,11 +165,11 @@
         }
         &-price{
           color: $color-font;
-          width: 10%;
+          width: 35%;
           float: left;
           line-height: 1.75;
           padding: 12px 0;
-          text-align: left;
+          text-align: right;
           border-bottom: 1px solid $color-base;
         }
         &-number{
@@ -183,6 +189,8 @@
         font-size: 20px;
         text-align: right;
         border-bottom: 1px solid;
+        clear: both;
+        padding-top: 20px;
         span{
           font-size: 36px;
           margin-left: 10px;
@@ -193,6 +201,68 @@
         text-align: right;
         color: $color-base;
         font-size: 12px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid;
+      }
+    }
+    .review-link{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: 1px solid $color-base;
+      &__restaurant{
+        .btn{
+          padding: 20px 10px;
+          margin-bottom: 10px;
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+      &__profile{
+        margin-bottom: 20px;
+        .btn{
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .review-btn{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 20px;
+      &__like{
+        display: inline-block;
+        .btn-secondary{
+          background-color: $color-white;
+          color: $color-font;
+          margin: 0 15px;
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+      &__edit{
+        display: inline-block;
+        .btn-primary{
+          color: $color-font;
+          margin: 0 15px;
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+      &__destroy{
+        display: inline-block;
+        .btn-danger{
+          color: $color-font;
+          margin: 0 15px;
+          i{
+            margin-right: 5px;
+          }
+        }
       }
     }
   }
