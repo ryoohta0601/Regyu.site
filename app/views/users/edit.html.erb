@@ -5,7 +5,7 @@
     <div class="mypage-sidebar">
       <div class="mypage-sidebar__nav-title">メニュー</div>
       <ul class="mypage-sidebar__nav-items">
-        <%= link_to user_path do %>
+        <%= link_to user_path(current_user) do %>
           <li>
             <i class="fas fa-home"></i><span>ホーム</span>
           </li>

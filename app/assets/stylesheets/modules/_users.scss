@@ -113,6 +113,12 @@
           color: $color-white;
           padding: 8px 20px;
         }
+        .destroy-btn{
+          input[type="submit"]{
+            background-color: #dc3545;
+            margin-top: 60px;
+          }
+        }
       }
     }
   }
