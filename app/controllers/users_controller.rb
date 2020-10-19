@@ -35,4 +35,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def user_params
+    params.fetch(:user, {}).permit(:username)
+  end
+
 end
