@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def email
+  end
+
   def show
   end
 

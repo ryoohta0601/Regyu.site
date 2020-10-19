@@ -7,7 +7,7 @@
     <div class="mypage-sidebar">
       <div class="mypage-sidebar__nav-title">メニュー</div>
       <ul class="mypage-sidebar__nav-items">
-        <%= link_to user_path do %>
+        <%= link_to user_path(current_user) do %>
           <li>
             <i class="fas fa-home"></i><span>ホーム</span>
           </li>
@@ -35,7 +35,7 @@
             <i class="fas fa-user-circle"></i><span>プロフィール</span>
           </li>
         <% end %>
-        <%= link_to "#" do %>
+        <%= link_to email_user_path(current_user) do %>
           <li>
             <i class="fas fa-envelope"></i><span>メールアドレス</span>
           </li>
