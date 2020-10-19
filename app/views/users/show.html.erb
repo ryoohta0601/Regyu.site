@@ -6,7 +6,7 @@
     <div class="mypage-sidebar">
       <div class="mypage-sidebar__nav-title">メニュー</div>
       <ul class="mypage-sidebar__nav-items">
-        <%= link_to mypages_path do %>
+        <%= link_to user_path do %>
           <li>
             <i class="fas fa-home"></i><span>ホーム</span>
           </li>
@@ -29,7 +29,7 @@
       </ul>
       <div class="mypage-sidebar__nav-title">アカウント管理</div>
       <ul class="mypage-sidebar__nav-items">
-        <%= link_to edit_mypage_path do %>
+        <%= link_to "#" do %>
           <li>
             <i class="fas fa-user-circle"></i><span>プロフィール</span>
           </li>
@@ -51,7 +51,7 @@
       <div class="user">
         <div class="user-image">
           <%= image_tag "牛.jpg", height: "60px", width: "60px"%>
-          <h2>ユーザー名</h2>
+          <h2><%= @user.username %></h2>
           <p>自己紹介文テスト</p>
           <table>
             <tr>
