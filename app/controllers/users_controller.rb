@@ -7,9 +7,6 @@ class UsersController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def email
-  end
-
   def show
   end
 
@@ -39,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.fetch(:user, {}).permit(:username, :email, :profile)
+    params.fetch(:user, {}).permit(:username, :email, :profile, :img, :remove_img)
   end
 
 end
