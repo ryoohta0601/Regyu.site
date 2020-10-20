@@ -33,7 +33,7 @@
             <i class="fas fa-user-circle"></i><span>プロフィール</span>
           </li>
         <% end %>
-        <%= link_to edit_email_path(current_user) do %>
+        <%= link_to edit_user_path(current_user) do %>
           <li>
             <i class="fas fa-envelope"></i><span>メールアドレス</span>
           </li>
@@ -56,11 +56,19 @@
             </tr>
             <tr>
               <th>自己紹介</th>
-              <td><%= f.text_field :username %></td>
+              <td><%= f.text_area :email %></td>
             </tr>
             <tr>
               <th>写真</th>
-              <td><%= f.text_field :username %></td>
+              <td><%= f.email_field :email_confirmation, label: false %></td>
+            </tr>
+            <tr>
+              <th>メールアドレス<br>（編集）</th>
+              <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+            </tr>
+            <tr>
+              <th>メールアドレス<br>（確認用）</th>
+              <td><%= f.email_field :email_confirmation, label: false %></td>
             </tr>
           </table>
           <div><%= f.submit "更新する" %></div>

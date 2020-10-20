@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :email
-
   resources :reviews, only: [:index, :show]
 
   resources :restaurants, only: [:index]
