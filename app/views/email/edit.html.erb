@@ -33,7 +33,7 @@
             <i class="fas fa-user-circle"></i><span>プロフィール</span>
           </li>
         <% end %>
-        <%= link_to email_user_path(current_user) do %>
+        <%= link_to edit_email_path(current_user) do %>
           <li>
             <i class="fas fa-envelope"></i><span>メールアドレス</span>
           </li>
@@ -48,7 +48,7 @@
     <div class="mypage-contents">
       <div class="mypage-contents__title">メールアドレス変更</div>
       <div class="mypage-contents__content">
-        <%= form_with model: @user, url: email_user_path(current_user), local: true, method: :post do |f| %>
+        <%= form_with model: @user, url: edit_email_path(current_user), local: true do |f| %>
           <div>メールアドレス</div>
           <div><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
           <%= f.email_field :email_confirmation, label: false %>
