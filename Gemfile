@@ -68,3 +68,6 @@ gem 'devise'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+# debug
+gem 'pry-rails'
