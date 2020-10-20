@@ -51,9 +51,13 @@
       <div class="mypage-contents__title">マイページ</div>
       <div class="user">
         <div class="user-image">
-          <%= image_tag "牛.jpg", height: "60px", width: "60px"%>
+          <% if current_user.img.url.nil? %>
+            <%= image_tag "no_image.png", height: "60px", width: "60px"%>
+          <% else %>
+            <%= image_tag current_user.img.url, height: "60px", width: "60px"%>
+          <% end %>
           <h2><%= @user.username %></h2>
-          <p>自己紹介文テスト</p>
+          <p><%= @user.profile %></p>
           <table>
             <tr>
               <th>投稿したレビュー</th>

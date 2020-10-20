@@ -56,11 +56,18 @@
             </tr>
             <tr>
               <th>自己紹介</th>
-              <td><%= f.text_area :email %></td>
+              <td><%= f.text_area :profile %></td>
             </tr>
             <tr>
               <th>写真</th>
-              <td><%= f.email_field :email_confirmation, label: false %></td>
+              <td>
+                <%= f.file_field :img %>
+                <% if current_user.img.url.nil? %>
+                  <p>まだ画像は登録されていません</p>
+                <% else %>
+                  <p><%= f.check_box :remove_img %>画像を削除する</p>
+                <% end %>
+              </td>
             </tr>
             <tr>
               <th>メールアドレス<br>（編集）</th>

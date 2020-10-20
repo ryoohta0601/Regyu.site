@@ -71,3 +71,6 @@ gem 'devise-i18n-views'
 
 # debug
 gem 'pry-rails'
+
+# image
+gem 'carrierwave'
