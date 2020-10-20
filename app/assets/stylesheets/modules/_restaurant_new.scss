@@ -1,0 +1,52 @@
+.restaurant-inner{
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  .container{
+    margin-top: 60px;
+    &-restaurant__add{
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      width: 100%;
+      .restaurant-title{
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: rgba(0,0,0,0.03);
+        i{
+          margin-right: 10px;
+        }
+      }
+      .restaurant-content{
+        padding: 20px;
+        border: 1px solid rgba(0,0,0,0.125);
+        margin-bottom: 20px;
+        text-align: center;
+        table{
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          th{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+            text-align: left;
+          }
+          td{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+            input,textarea{
+              width: 100%;
+              font-size: 16px;
+              padding: 8px;
+            }
+          }
+        }
+        input[type="submit"]{
+          background-color: $color-btn;
+          color: $color-white;
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+}
