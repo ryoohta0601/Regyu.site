@@ -33,7 +33,7 @@
             <i class="fas fa-user-circle"></i><span>プロフィール</span>
           </li>
         <% end %>
-        <%= link_to "#" do %>
+        <%= link_to edit_email_path(current_user) do %>
           <li>
             <i class="fas fa-envelope"></i><span>メールアドレス</span>
           </li>
@@ -46,42 +46,26 @@
       </ul>
     </div>
     <div class="mypage-contents">
-      <div class="mypage-contents__title">パスワード変更</div>
+      <div class="mypage-contents__title">メールアドレス変更</div>
       <div class="mypage-contents__content">
+        <%= form_with model: @user, url: edit_email_path(current_user), local: true do |f| %>
+          <div>メールアドレス</div>
+          <div><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
+          <%= f.email_field :email_confirmation, label: false %>
+          <div class="actions">
+            <%= f.submit "更新する" %>
+          </div>
+        <% end %>
+        <% if false %>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
           <div class="field">
-            <table>
-              <tr>
-                <th><%= f.label :current_password %> <i><br />(変更を確認するには、現在のパスワードが必要です)</i><br /></th>
-                <td><%= f.password_field :current_password, autocomplete: "current-password" %></td>
-              </tr>
-              <tr>
-                <th>
-                  <%= f.label :新しいパスワード %>
-                  <i>
-                  <% if @minimum_password_length %><br />
-                    <em>(<%= @minimum_password_length %> 文字以内)</em>
-                  <% end %>
-                  </i>
-                </th>
-                <td><%= f.password_field :password, autocomplete: "new-password" %></td>
-              </tr>
-              <tr>
-                <th><%= f.label :新しいパスワード（確認用） %><br /></th>
-                <td> <%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
-              </tr>
-            </table>
-            <div class="actions">
-              <%= f.submit "更新する" %>
-            </div>
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
           </div>
         <% end %>
-
-        <div class="destroy-btn"><%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "本当に削除してもいいですか？" }, method: :delete %></div>
-
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-<%= render partial: 'shared/footer' %>
