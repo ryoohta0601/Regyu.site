@@ -56,12 +56,14 @@
             </tr>
             <tr>
               <th>自己紹介</th>
-              <td><%= f.text_area :email %></td>
+              <td><%= f.text_area :profile %></td>
             </tr>
+            <% if false %>
             <tr>
               <th>写真</th>
               <td><%= f.email_field :email_confirmation, label: false %></td>
             </tr>
+            <% end %>
             <tr>
               <th>メールアドレス<br>（編集）</th>
               <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
