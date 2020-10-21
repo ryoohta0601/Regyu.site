@@ -79,7 +79,7 @@
           border: 1px solid rgba(0, 0, 0, 0.125);
           width: 90%;
           margin: 0 auto;
-          margin-bottom: 20px;
+          margin-bottom: 60px;
           th{
             border: 1px solid rgba(0, 0, 0, 0.125);
             padding: 20px 10px;
@@ -87,6 +87,115 @@
           td{
             border: 1px solid rgba(0, 0, 0, 0.125);
             padding: 20px 10px;
+          }
+        }
+        #map{
+          width: 70%;
+          height: 300px;
+          margin: 0 auto;
+        }
+        .bookmark{
+          width: 90%;
+          margin-top: 20px;
+          text-align: right;
+          .btn{
+            border: 1px solid $color-font;
+            background-color: $color-white;
+            color: $color-font;
+            i{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      .container-reviews__section4{
+        border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+        .reviews__title{
+          padding: 10px 20px;
+          font-size: 24px;
+          font-weight: bold;
+          background-color: rgba(0,0,0,0.03);
+          i{
+            margin-right: 10px;
+          }
+        }
+        .reviews__contents{
+          padding: 32px;
+          border: 1px solid rgba(0,0,0,0.125);
+          margin-bottom: 20px;
+          .review-content{
+            margin-top: 20px;
+            ul{
+              width: 100%;
+              display: flex;
+              margin: 0 auto;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              li{
+                width: 100%;
+                margin-right: 10px;
+                border: 1px solid rgba(0,0,0,0.125);
+                margin-bottom: 16px;
+                position: relative;
+                .review-image{
+                  width: 40%;
+                  img{
+                    width: 100%;
+                    float: left;
+                  }
+                }
+                .review-show{
+                  width: 60%;
+                  float: right;
+                  h3{
+                    color: $color-btn;
+                    font-size: 24px;
+                    margin-left: 15px;
+                    margin-top: 15px;
+                    margin-bottom: 24px;
+                    @media screen and (min-width: 960px) {
+                      margin-bottom: 12px;
+                    }
+                  }
+                  .review-subject{
+                    font-size: 16px;
+                    margin-left: 15px;
+                    border-bottom: 1px solid $color-font;
+                    margin-bottom: 60px;
+                  }
+                  .review-date{
+                    font-size: 12px;
+                    color: $color-base;
+                    margin-right: 15px;
+                    position: absolute;
+                    right: 60px;
+                    bottom: 20px;
+                  }
+                  .review-name{
+                    font-size: 16px;
+                    margin: 0 15px 5px 0;
+                    color: $color-base;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 60px;
+                    padding: 0;
+                    .bi-pencil{
+                      margin-left: 5px;
+                    }
+                  }
+                  .user-image{
+                    position: absolute;
+                    display: block;
+                    right: 10px;
+                    bottom: 10px;
+                    img{
+                      border: 1px solid rgba(0,0,0,0.125);
+                      border-radius: 50%;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
