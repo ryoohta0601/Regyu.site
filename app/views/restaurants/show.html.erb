@@ -1,0 +1,35 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner restaurant-inner">
+  <div class="container">
+    <div class="container-restaurant__detail">
+      <div class="restaurant-detail">
+        <div class="restaurant-detail__title">
+          店舗情報
+        </div>
+        <div class="restaurant-detail__contents">
+          <div class="restaurant-name">
+            <h2><%= @restaurant.name %></h2>
+          </div>
+          <div class="restaurant-image">
+            <%= image_tag @restaurant.img.url, height: "120px", width: "120px"%>
+          </div>
+          <table>
+            <tr>
+              <th>店名</th>
+              <td><%= @restaurant.name %></td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td><%= @restaurant.address %></td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td><%= @restaurant.phone %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

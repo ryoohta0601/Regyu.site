@@ -48,5 +48,48 @@
         }
       }
     }
+    &-restaurant__detail{
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      width: 100%;
+      .restaurant-detail__title{
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: rgba(0,0,0,0.03);
+      }
+      .restaurant-detail__contents{
+        padding: 20px;
+        border: 1px solid rgba(0,0,0,0.125);
+        margin-bottom: 20px;
+        text-align: center;
+        .restaurant-name{
+          margin: 20px;
+          h2{
+            font-weight: bold;
+          }
+        }
+        .restaurant-image{ 
+          margin-bottom: 60px;         
+          img{
+            width: 60%;
+            height: 400px;
+          }
+        }
+        table{
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          th{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+          }
+          td{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+          }
+        }
+      }
+    }
   }
 }
