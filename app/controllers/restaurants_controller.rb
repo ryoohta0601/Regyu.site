@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
 
-  before_action :set_restaurant
+  before_action :set_restaurant, only: [:show]
 
   def index
   end
@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to root_path
+      redirect_to restaurant_path(@restaurant.id)
     else
       redirect_to new_restaurant_path
     end
@@ -28,6 +28,6 @@ class RestaurantsController < ApplicationController
   end
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :phone, :img)
+    params.require(:restaurant).permit(:name, :address, :phone, :img, :prefecture_id)
   end
 end

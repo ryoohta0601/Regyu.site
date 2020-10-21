@@ -14,6 +14,10 @@
               <td><%= f.text_field :name %></td>
             </tr>
             <tr>
+              <th>都道府県</th>
+              <td><%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"} %></td>
+            </tr>
+            <tr>
               <th>所在地</th>
               <td><%= f.text_field :address %></td>
             </tr>
