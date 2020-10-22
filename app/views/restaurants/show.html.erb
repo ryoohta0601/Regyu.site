@@ -77,14 +77,14 @@ function initMap(){
   geocoder = new google.maps.Geocoder()
 
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7828, lng:-73.9653},
+    center: {lat: <%= @restaurant.latitude %>, lng: <%= @restaurant.longitude %>},
     zoom: 12,
   });
 
   marker = new google.maps.Marker({
-    position:  {lat: 40.7828, lng:-73.9653},
+    position:  {lat: <%= @restaurant.latitude %>, lng: <%= @restaurant.longitude %>},
     map: map
   });
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmCsfDkHxJj89ULu_I4VuQ1fRYZx4HZCk&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>

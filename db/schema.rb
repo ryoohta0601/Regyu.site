@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 2020_10_21_071043) do
     t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "prefecture", null: false
+    t.integer "prefecture_id"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", force: :cascade do |t|
