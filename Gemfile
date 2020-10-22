@@ -74,3 +74,12 @@ gem 'pry-rails'
 
 # image
 gem 'carrierwave'
+
+# gem active_hash
+gem 'active_hash'
+
+# map
+gem "geocoder"
+
+# api key
+gem "dotenv-rails"
