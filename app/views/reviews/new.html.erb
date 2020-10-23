@@ -1,0 +1,50 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner review-inner">
+  <div class="container">
+    <div class="container-review__title">
+      <i class="fas fa-edit"></i>レビューを登録する
+    </div>
+    <div class="container-review__content">
+      <%= form_with model: @review do |f| %>
+        <table>
+          <tr>
+            <th>タイトル</th>
+            <td><%= f.text_field :title %></td>
+          </tr>
+          <tr>
+            <th>本文</th>
+            <td><%= f.text_area :body %></td>
+          </tr>
+          <tr>
+            <th>画像</th>
+            <td>
+              <%= f.file_field :image %><br>
+              <%= f.file_field :image %><br>
+              <%= f.file_field :image %><br>
+              <%= f.file_field :image %><br>
+              <%= f.file_field :image %>
+            </td>
+          </tr>
+          <tr>
+            <th>曜日選択</th>
+            <td><%= f.select :day_week, {'月': 1, '火': 2, '水': 3, '木': 4, '金': 5, '土': 6, '日': 7}, {include_blank: "---"} %></td>
+          </tr>
+          <tr>
+            <th>来店した時間</th>
+            <td><%= f.select :time, ['9時', '10時', '11時', '12時', '13時', '14時', '15時', '16時', '17時', '18時', '19時', '20時', '21時', '22時', '23時', '24時', '1時', '2時', '3時', '4時', '5時'], {include_blank: "---"} %></td>
+          </tr>
+          <tr>
+            <th>来店した人数</th>
+            <td><%= f.select :number_users, ['2人', '3人', '4人', '5人', '6人', '7人', '8人以上'], {include_blank: "---"} %></td>
+          </tr>
+          <tr>
+            <th>合計金額</th>
+            <td><%= f.text_field :total_price %>円</td>
+          </tr>
+        </table>
+        <div><%= f.submit "更新する" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

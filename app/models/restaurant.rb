@@ -6,4 +6,10 @@ class Restaurant < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+
+  validates :name, presence: true
+  validates :prefecture, presence: true
+  validates :address, presence: true
+
+  has_many :reviews
 end

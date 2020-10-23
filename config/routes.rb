@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :reviews, only: [:index, :show]
+  resources :reviews, only: [:index, :show, :new, :create]
 
   resources :restaurants, only: [:index, :show, :new, :create]
   
