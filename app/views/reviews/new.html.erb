@@ -7,6 +7,7 @@
     </div>
     <div class="container-review__content">
       <%= form_with model: @review do |f| %>
+      <%= f.hidden_field :restaurant_id, :value => params[:restaurant_id] %>
         <table>
           <tr>
             <th>タイトル</th>
@@ -19,11 +20,9 @@
           <tr>
             <th>画像</th>
             <td>
-              <%= f.file_field :image %><br>
-              <%= f.file_field :image %><br>
-              <%= f.file_field :image %><br>
-              <%= f.file_field :image %><br>
-              <%= f.file_field :image %>
+              <%= f.fields_for :review_images do |image| %>
+                <%= image.file_field :image, name: "review_images[image_url][]" %>
+              <% end %>
             </td>
           </tr>
           <tr>

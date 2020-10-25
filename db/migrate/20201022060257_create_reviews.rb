@@ -4,11 +4,11 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.string :title, null: false
       t.text :body, null: false
       t.string :images
-      t.string :restaurant_name
       t.string :day_week
-      t.integer :time
-      t.integer :number_users
+      t.string :time
+      t.string :number_users
       t.integer :total_price
+      t.string :restaurant_id
       t.references :user, foreign_key: true
 
       t.timestamps

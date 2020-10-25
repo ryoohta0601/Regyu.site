@@ -66,6 +66,7 @@
     </div>
   </div>
 </div>
+<%= link_to '投稿', new_review_path(restaurant_id: @restaurant.id) %>
 <%= render partial: 'shared/footer' %>
 
 <style>#map {height: 600px;width: 600px;}</style>
