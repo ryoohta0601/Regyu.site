@@ -343,50 +343,17 @@
       </div>
       <div class="restaurants-index__contents">
         <div class="restaurant-index__content">
-          <ul>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>１位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
+            <ul>
+              <% @restaurants.each do |restaurant| %>
+                <li>
+                  <%= link_to "#" do%>
+                    <%= image_tag restaurant.img.url%>
+                    <h3>１位：<%= restaurant.name %>(<%= restaurant.prefecture.name %>)</h3>
+                    <p>(<%= restaurant.reviews.count %>件のレビュー)</p>
+                  <% end %>
+                </li>
               <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>２位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>３位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>３位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>３位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>３位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-          </ul>
+            </ul>
           <div class="more-restaurants">
             <%= link_to "#" do %>
               >>もっと店舗を見る
