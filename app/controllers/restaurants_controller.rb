@@ -7,6 +7,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @reviews = Review.where(restaurant_id: params[:id]).order(created_at: :desc).limit(5)
   end
 
   def new

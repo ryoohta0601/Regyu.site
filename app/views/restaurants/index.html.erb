@@ -346,7 +346,7 @@
             <ul>
               <% @restaurants.each do |restaurant| %>
                 <li>
-                  <%= link_to "#" do%>
+                  <%= link_to restaurant_path(restaurant) do%>
                     <%= image_tag restaurant.img.url%>
                     <h3>１位：<%= restaurant.name %>(<%= restaurant.prefecture.name %>)</h3>
                     <p>(<%= restaurant.reviews.count %>件のレビュー)</p>
