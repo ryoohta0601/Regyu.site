@@ -32,6 +32,11 @@
           <div class="bookmark">
             <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i>ブックマークを登録する</button>
           </div>
+          <div class="review-new">
+            <%= link_to new_review_path(restaurant_id: @restaurant.id) do%>
+              <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i>この店舗のRegyuを投稿する</button>
+            <% end %>
+          </div>
         </div>
         <div class="container-reviews__section4">
           <div class="reviews__title">
