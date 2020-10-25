@@ -1,6 +1,12 @@
 class ReviewsController < ApplicationController
 
   def index
+    @reviews = Review.all.order(created_at: :desc).limit(5)
+  end
+
+  def show
+    @review = Review.find(params[:id])
+    @restaurant = params[:restaurant_id]
   end
 
   def new
@@ -21,7 +27,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:title, :body, :image, :day_week, :time, :number_users, :menu_items, :menu_price, :menu_numbers, :total_price, :restaurant_id).merge(user_id: current_user.id)
+    params.require(:review).permit(:title, :body, :image, :day_week, :time, :number_users, :total_price, :restaurant_id).merge(user_id: current_user.id)
   end
 
 end

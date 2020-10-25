@@ -107,6 +107,20 @@
             }
           }
         }
+        .review-new{
+          margin-top: 60px;
+          a{
+            .btn{
+              background-color: $color-base;
+              border: 1px solid $color-font;
+              color: $color-font;
+              padding: 16px;
+              i{
+                margin-right: 5px;
+              }
+            }
+          }
+        }
       }
       .container-reviews__section4{
         border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
