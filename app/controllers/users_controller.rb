@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @reviews = Review.where(user_id: params[:id]).order(created_at: :desc).limit(5)
   end
 
   def edit
