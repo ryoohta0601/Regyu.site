@@ -130,9 +130,9 @@
               display: flex;
               margin: 0 auto;
               flex-wrap: wrap;
-              justify-content: space-between;
+              justify-content: flex-start;
               li{
-                width: 48%;
+                width: calc(100%/ 2 - 10px);
                 margin-right: 10px;
                 border: 1px solid rgba(0,0,0,0.125);
                 margin-bottom: 16px;
@@ -147,6 +147,8 @@
                 .review-show{
                   width: 60%;
                   float: right;
+                  position: relative;
+                  height: 160px;
                   h3{
                     color: $color-btn;
                     font-size: 24px;
@@ -167,8 +169,11 @@
                   }
                   .review-name{
                     font-size: 16px;
-                    margin: 0 0 5px 15px;
                     color: $color-base;
+                    position: absolute;
+                    bottom: 5px;
+                    margin: 0;
+                    margin-left: 15px;
                     .bi-pencil{
                       margin-left: 5px;
                     }
