@@ -14,4 +14,11 @@ class User < ApplicationRecord
   length: { maximum: 200 }
 
   has_many :reviews
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.username = 'ゲストユーザー'
+    end
+  end
 end
