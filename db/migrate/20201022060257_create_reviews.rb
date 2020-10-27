@@ -3,7 +3,6 @@ class CreateReviews < ActiveRecord::Migration[6.0]
     create_table :reviews do |t|
       t.string :title, null: false
       t.text :body, null: false
-      t.string :images
       t.string :day_week
       t.string :time
       t.string :number_users

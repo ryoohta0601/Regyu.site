@@ -11,7 +11,7 @@
         <div class="restaurant-name">
           <%= link_to @review.restaurant.name, restaurant_path(@review.restaurant) %>
         </div>
-        <%= link_to "#" do%>
+        <%= link_to user_path(@review.user_id) do%>
           <div class="user-name">
             <%= @review.user.username %>
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -30,16 +30,28 @@
       </div>
       <div class="review-content">
         <div class="review-content__image">
-          <%= image_tag "IMG_2620.JPG" %>
+          <% if @review.images[0].nil? %>
+            <%= image_tag "no_image.png"%>
+          <% else %>
+            <%= image_tag @review.images[0].url %>
+          <% end %>
         </div>
         <div class="review-content__text">
           <%= @review.body %>
         </div>
         <div class="review-sub__image">
-          <div class="sub-image"><%= image_tag "IMG_2621.JPG"%></div>
-          <div class="sub-image"><%= image_tag "IMG_2655.JPG"%></div>
-          <div class="sub-image"><%= image_tag "IMG_2656.JPG"%></div>
-          <div class="sub-image"><%= image_tag "サーロイン.jpg"%></div>
+          <% if @review.images[1].present? %>
+            <div class="sub-image"><%= image_tag @review.images[1].url%></div>
+          <% end %>
+          <% if @review.images[2].present? %>
+            <div class="sub-image"><%= image_tag @review.images[2].url%></div>
+          <% end %>
+          <% if @review.images[3].present? %>
+            <div class="sub-image"><%= image_tag @review.images[3].url%></div>
+          <% end %>
+          <% if @review.images[4].present? %>
+            <div class="sub-image"><%= image_tag @review.images[4].url%></div>
+          <% end %>
         </div>
       </div>
       <div class="review-summary">
@@ -72,7 +84,9 @@
         </div>
         <% end %>
         <div class="review-link__profile">
+        <%= link_to user_path(@review.user_id) do%>
           <button type="button" class="btn btn-info"><i class="fas fa-user"></i>Regyuした人のプロフィールを見る</button>
+        <% end %>
         </div>
       </div>
       <div class="review-btn">
