@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {   registrations: 'users/registrations',
                                       sessions: 'users/sessions' }
+
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
+
   root "toppages#index"
 
   resources :users, only: [:show, :edit, :update]
@@ -8,6 +13,6 @@ Rails.application.routes.draw do
   resources :reviews, only: [:index, :show, :new, :create]
 
   resources :restaurants, only: [:index, :show, :new, :create]
-  
+
   resources :ranks, only: [:index]
 end
