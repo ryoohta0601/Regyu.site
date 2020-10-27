@@ -152,39 +152,6 @@
           }
         }
       }
-      .review-menu__items{
-        border-bottom: 1px solid $color-base;
-        &-name{
-          color: $color-font;
-          width: 60%;
-          float: left;
-          line-height: 1.75;
-          padding: 12px 0;
-          text-align: left;
-          border-bottom: 1px solid $color-base;
-        }
-        &-price{
-          color: $color-font;
-          width: 35%;
-          float: left;
-          line-height: 1.75;
-          padding: 12px 0;
-          text-align: right;
-          border-bottom: 1px solid $color-base;
-        }
-        &-number{
-          color: $color-base;
-          width: 5%;
-          float: right;
-          line-height: 1.75;
-          padding: 12px 0;
-          text-align: right;
-          border-bottom: 1px solid $color-base;
-          span{
-            color: $color-base;
-          }
-        }
-      }
       .review-menu__total-price{
         font-size: 20px;
         text-align: right;
@@ -279,6 +246,7 @@
     margin: 0 auto;
     margin-bottom: 20px;
     th{
+      width: 20%;
       border: 1px solid rgba(0, 0, 0, 0.125);
       padding: 20px 10px;
       text-align: left;

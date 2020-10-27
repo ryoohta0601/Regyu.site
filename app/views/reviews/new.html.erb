@@ -20,9 +20,11 @@
           <tr>
             <th>画像</th>
             <td>
-              <%= f.fields_for :review_images do |image| %>
-                <%= image.file_field :image, name: "review_images[image_url][]" %>
-              <% end %>
+              <%= f.file_field :images, multiple: true%>
+              <%= f.file_field :images, multiple: true%>
+              <%= f.file_field :images, multiple: true%>
+              <%= f.file_field :images, multiple: true%>
+              <%= f.file_field :images, multiple: true%>
             </td>
           </tr>
           <tr>

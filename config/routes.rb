@@ -3,11 +3,7 @@ Rails.application.routes.draw do
                                       sessions: 'users/sessions' }
   root "toppages#index"
 
-  resources :users, only: [:show, :edit, :update] do
-    member do
-      get :mypage
-    end
-  end
+  resources :users, only: [:show, :edit, :update]
 
   resources :reviews, only: [:index, :show, :new, :create]
 

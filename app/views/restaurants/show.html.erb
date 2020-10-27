@@ -59,7 +59,11 @@
                           </svg>
                         </p>
                         <div class="user-image">
-                          <%= image_tag review.user.img.url, height: "60px", width: "60px"%>
+                          <% if review.user.img.url.nil? %>
+                            <%= image_tag "no_image.png", height: "60px", width: "60px"%>
+                          <% else %>
+                            <%= image_tag review.user.img.url, height: "60px", width: "60px"%>
+                          <% end %>
                         </div>
                       </div>
                     <% end %>
