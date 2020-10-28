@@ -7,7 +7,8 @@
     </div>
     <div class="container-review__content">
       <div class="review-head">
-        <h2 class="review-title"><%= @review.title %></h2>
+        <h2 class="review-title"><%= @review.title %>｜<%= @review.rate %>点</h2>
+        <div id="star-rate-<%= @review.id %>" class="star-rate"></div>
         <div class="restaurant-name">
           <%= link_to @review.restaurant.name, restaurant_path(@review.restaurant) %>
         </div>
@@ -106,3 +107,15 @@
   </div>
 </div>
 <%= render partial: 'shared/footer' %>
+
+<script>
+$('#star-rate-<%= @review.id %>').raty({
+  size: 36,
+  starOff:  '<%= asset_path('star-off.png') %>',
+  starOn : '<%= asset_path('star-on.png') %>',
+  starHalf: '<%= asset_path('star-half.png') %>',
+  half: true,
+  readOnly: true,
+  score: <%= @review.rate %>,
+});
+</script>  

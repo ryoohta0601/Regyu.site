@@ -52,6 +52,18 @@
                       <div class="review-show">
                         <h3><%= review.restaurant.name %></h3>
                         <p class="review-subject"><%= review.title %></p>
+                        <div id="star-rate-<%= review.id %>" class="star-rate"></div>
+                        <script>
+                        $('#star-rate-<%= review.id %>').raty({
+                          size: 36,
+                          starOff:  '<%= asset_path('star-off.png') %>',
+                          starOn : '<%= asset_path('star-on.png') %>',
+                          starHalf: '<%= asset_path('star-half.png') %>',
+                          half: true,
+                          readOnly: true,
+                          score: <%= review.rate %>,
+                        });
+                        </script>
                         <p class="review-date"><%= review.created_at.strftime('%Y.%m.%d') %></p>
                         <p class="review-name"><%= review.user.username %>
                           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

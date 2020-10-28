@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:title, :body, :day_week, :time, :number_users, :total_price, :restaurant_id, images: []).merge(user_id: current_user.id)
+    params.require(:review).permit(:title, :body, :day_week, :time, :number_users, :total_price, :rate, :restaurant_id, images: []).merge(user_id: current_user.id)
   end
 
 end

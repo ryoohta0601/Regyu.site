@@ -23,8 +23,15 @@
       .review-title{
         font-size: 25px;
         font-weight: bold;
-        margin-bottom: 60px;
+        margin-bottom: 24px;
         letter-spacing: .05em;
+      }
+      .star-rate{
+        margin-bottom: 16px;
+        img{
+          height: 36px;
+          width: 36px;
+        }
       }
       .restaurant-name{
         font-size: 16px;
@@ -254,6 +261,10 @@
     td{
       border: 1px solid rgba(0, 0, 0, 0.125);
       padding: 20px 10px;
+      img{
+        height: 36px;
+        width: 36px;
+      }
       input,textarea,select{
         width: 100%;
         font-size: 16px;
