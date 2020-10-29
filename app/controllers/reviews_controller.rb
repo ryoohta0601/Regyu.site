@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :edit, :destroy]
 
   def index
     @reviews = Review.all.order(created_at: :desc).limit(5)
@@ -7,6 +8,7 @@ class ReviewsController < ApplicationController
   def show
     @review = Review.find(params[:id])
     @restaurant = params[:restaurant_id]
+    @like = Like.new
   end
 
   def new

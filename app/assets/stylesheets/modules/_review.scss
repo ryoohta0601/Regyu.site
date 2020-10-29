@@ -207,7 +207,8 @@
       margin: 0 auto;
       text-align: center;
       margin-top: 20px;
-      &__like{
+      margin-bottom: 16px;
+      .button_to{
         display: inline-block;
         .btn-secondary{
           background-color: $color-white;
