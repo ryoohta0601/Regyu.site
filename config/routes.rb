@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update] do
     member do
       get :review
+      get :bookmark
     end
   end
 
@@ -18,7 +19,9 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
 
-  resources :restaurants, only: [:index, :show, :new, :create]
+  resources :restaurants, only: [:index, :show, :new, :create] do
+    resources :bookmarks, only: [:create, :destroy]
+  end
 
   resources :ranks, only: [:index]
 end

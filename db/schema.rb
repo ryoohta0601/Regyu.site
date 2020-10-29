@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_29_092631) do
+ActiveRecord::Schema.define(version: 2020_10_29_153006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.bigint "restaurant_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id", "user_id"], name: "index_bookmarks_on_restaurant_id_and_user_id", unique: true
+    t.index ["restaurant_id"], name: "index_bookmarks_on_restaurant_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
 
   create_table "likes", force: :cascade do |t|
     t.bigint "review_id", null: false
@@ -34,14 +44,6 @@ ActiveRecord::Schema.define(version: 2020_10_29_092631) do
     t.integer "prefecture_id"
     t.float "latitude"
     t.float "longitude"
-  end
-
-  create_table "review_images", force: :cascade do |t|
-    t.string "image_url"
-    t.bigint "review_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["review_id"], name: "index_review_images_on_review_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -75,8 +77,9 @@ ActiveRecord::Schema.define(version: 2020_10_29_092631) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookmarks", "restaurants"
+  add_foreign_key "bookmarks", "users"
   add_foreign_key "likes", "reviews"
   add_foreign_key "likes", "users"
-  add_foreign_key "review_images", "reviews"
   add_foreign_key "reviews", "users"
 end

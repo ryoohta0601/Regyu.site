@@ -29,14 +29,24 @@
             </tr>
           </table>
           <div id='map'></div>
+          <% if user_signed_in? %>
           <div class="bookmark">
-            <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i>ブックマークを登録する</button>
+            <% if current_user.bookmark_by?(@restaurant) %>
+              <%= button_to restaurant_bookmark_path(@restaurant), class:"btn btn-secondary delete-btn", method: :delete, remote: true do%>
+              <i class="fas fa-bookmark"></i>ブックマークを取り消す
+              <% end %>
+            <% else %>
+              <%= button_to restaurant_bookmarks_path(@restaurant), class:"btn btn-secondary", remote: true do%>
+              <i class="fas fa-bookmark"></i>ブックマークを登録する
+              <% end %>
+            <% end %>
           </div>
           <div class="review-new">
             <%= link_to new_review_path(restaurant_id: @restaurant.id) do%>
               <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i>この店舗のRegyuを投稿する</button>
             <% end %>
           </div>
+          <% end %>
         </div>
         <div class="container-reviews__section4">
           <div class="reviews__title">

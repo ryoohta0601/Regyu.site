@@ -91,6 +91,7 @@
         </div>
       </div>
       <div class="review-btn">
+      <% if user_signed_in? %>
         <% if current_user.already_liked?(@review) %>
           <%= button_to review_like_path(@review), class:"btn btn-secondary", method: :delete, remote: true do%>
             <div class="review-btn__like">
@@ -104,6 +105,7 @@
             </div>
           <% end %>
         <% end %>
+      <% end %>
         <% if user_signed_in? && @review.user_id == current_user.id %>
           <div class="review-btn__edit">
             <%= link_to edit_review_path(@review) do%>

@@ -106,6 +106,13 @@
               margin-right: 5px;
             }
           }
+          .delete-btn{
+            background-color: $color-font;
+            color: $color-white;
+            i{
+              color: $color-white;
+            }
+          }
         }
         .review-new{
           margin-top: 60px;

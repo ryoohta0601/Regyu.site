@@ -1,0 +1,31 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner profile-inner">
+  <div class="profile-container">
+    <% if @bookmarks.exists? %>
+      <div class="profile-section3">
+        <div class="profile-section3__title">
+          ブックマークした店舗
+        </div>
+        <div class="bookmarks">
+          <div class="bookmarks-contents">
+            <ul>
+              <% @bookmarks.each do |bookmark| %>
+                <li>
+                  <%= link_to restaurant_path(bookmark.restaurant_id) do%>
+                    <%= image_tag bookmark.restaurant.img.url%>
+                    <h3><%= bookmark.restaurant.name %></h3>
+                    <p>(<%= bookmark.restaurant.reviews.count %>件のレビュー)</p>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <p>まだブックマークはありません</p>
+    <% end %>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>
