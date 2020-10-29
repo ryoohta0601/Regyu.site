@@ -13,7 +13,7 @@
               <li>
                 <%= link_to restaurant_path(restaurant) do%>
                   <%= image_tag restaurant.img.url%>
-                  <h3><%= restaurant.name %></h3>
+                  <h3><%= restaurant.name %>(<%= restaurant.prefecture.name %>)</h3>
                   <p>(<%= restaurant.reviews.count %>件のレビュー)</p>
                 <% end %>
               </li>
@@ -29,33 +29,23 @@
       <div class="review-person__contents">
         <div class="review-person__content">
           <ul>
-            <li>
-              <%= link_to "#" do%>
-                <div class="user-image"><%= image_tag "サーロイン.jpg", height: "160px", width: "160px"%></div>
-                <div class="user-name">
-                  <h3>１位：にくや萬野（大阪）</h3>
-                  <p>(1件のレビュー)</p>
-                </div>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <div class="user-image"><%= image_tag "サーロイン.jpg", height: "160px", width: "160px"%></div>
-                <div class="user-name">
-                  <h3>２位：にくや萬野（大阪）</h3>
-                  <p>(1件のレビュー)</p>
-                </div>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <div class="user-image"><%= image_tag "サーロイン.jpg", height: "160px", width: "160px"%></div>
-                <div class="user-name">
-                  <h3>３位：にくや萬野（大阪）</h3>
-                  <p>(1件のレビュー)</p>
-                </div>
-              <% end %>
-            </li>
+            <% @users.each do |user| %>
+              <li>
+                <%= link_to user_path(user) do%>
+                  <div class="user-image">
+                    <% if user.img.url.nil? %>
+                      <%= image_tag "no_image.png", height: "160px", width: "160px"%>
+                    <% else %>
+                      <%= image_tag user.img.url, height: "160px", width: "160px"%>
+                    <% end %>
+                  </div>
+                  <div class="user-name">
+                    <h3><%= user.username %></h3>
+                    <p>(<%= user.reviews.count %>件のレビュー)</p>
+                  </div>
+                <% end %>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>

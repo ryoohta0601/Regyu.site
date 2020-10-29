@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
 
-  before_action :authenticate_user!, only: [:mypage, :edit, :update]
+  before_action :authenticate_user!, only: [:edit, :update]
   before_action :set_user, only: [:show, :edit, :update]
-  
-  def mypage
-    redirect_to user_path(current_user)
+
+  def review
+    @reviews = Review.all.order(created_at: :desc).limit(5)
   end
 
   def show

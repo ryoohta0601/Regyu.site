@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   root "toppages#index"
 
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    member do
+      get :review
+    end
+  end
 
   resources :reviews do
     resources :likes, only: [:create, :destroy]
