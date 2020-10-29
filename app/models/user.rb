@@ -13,7 +13,13 @@ class User < ApplicationRecord
   validates :profile,
   length: { maximum: 200 }
 
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_reviews, through: :likes, source: :review
+  
+  def already_liked?(review)
+    self.likes.exists?(review_id: review.id)
+  end
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|

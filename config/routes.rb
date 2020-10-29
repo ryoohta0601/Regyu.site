@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update]
 
-  resources :reviews
+  resources :reviews do
+    resources :likes, only: [:create, :destroy]
+  end
 
   resources :restaurants, only: [:index, :show, :new, :create]
 

@@ -9,6 +9,8 @@ class UsersController < ApplicationController
 
   def show
     @reviews = Review.where(user_id: params[:id]).order(created_at: :desc).limit(5)
+    @review= Review.where(user_id: params[:id])
+    @like = Like.where(user_id: params[:id])
   end
 
   def edit
