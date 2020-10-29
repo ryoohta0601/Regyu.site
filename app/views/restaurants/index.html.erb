@@ -343,17 +343,17 @@
       </div>
       <div class="restaurants-index__contents">
         <div class="restaurant-index__content">
-            <ul>
-              <% @restaurants.each do |restaurant| %>
-                <li>
-                  <%= link_to restaurant_path(restaurant) do%>
-                    <%= image_tag restaurant.img.url%>
-                    <h3>１位：<%= restaurant.name %>(<%= restaurant.prefecture.name %>)</h3>
-                    <p>(<%= restaurant.reviews.count %>件のレビュー)</p>
-                  <% end %>
-                </li>
-              <% end %>
-            </ul>
+          <ul>
+            <% @restaurants.each do |restaurant| %>
+              <li>
+                <%= link_to restaurant_path(restaurant) do%>
+                  <%= image_tag restaurant.img.url%>
+                  <h3><%= restaurant.name %>(<%= restaurant.prefecture.name %>)</h3>
+                  <p>(<%= restaurant.reviews.count %>件のレビュー)</p>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
           <div class="more-restaurants">
             <%= link_to "#" do %>
               >>もっと店舗を見る
