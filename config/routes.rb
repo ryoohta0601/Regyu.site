@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     member do
       get :review
       get :bookmark
+      get :like
     end
   end
 

@@ -7,6 +7,11 @@ class UsersController < ApplicationController
     @reviews = Review.where(user_id: params[:id]).order(created_at: :desc).limit(5)
   end
 
+  def like
+    @like = Like.where(user_id: params[:id])
+    @likes = @like.includes(:review).order(created_at: :desc).limit(5)
+  end
+
   def bookmark
     @bookmark = Bookmark.where(user_id: params[:id])
     @bookmarks = @bookmark.includes(:restaurant).order(created_at: :desc).limit(5)

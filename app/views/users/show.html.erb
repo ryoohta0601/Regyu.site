@@ -69,7 +69,11 @@
             </tr>
             <tr>
               <th>いいねしたレビュー</th>
-              <td><%= @like.count %>件</td>
+              <td>
+                <%= link_to like_user_path(current_user) do%>
+                  <%= @like.count %>件
+                <% end %>
+              </td>
             </tr>
             <tr>
               <th>ブックマークした店</th>
