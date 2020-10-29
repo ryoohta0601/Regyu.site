@@ -9,27 +9,15 @@
       <div class="popular-rank__contents">
         <div class="popular-rank__content">
           <ul>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>１位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>２位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "サーロイン.jpg"%>
-                <h3>３位：にくや萬野（大阪）</h3>
-                <p>(1件のレビュー)</p>
-              <% end %>
-            </li>
+            <% @restaurants.first(3).each do |restaurant| %>
+              <li>
+                <%= link_to restaurant_path(restaurant) do%>
+                  <%= image_tag restaurant.img.url%>
+                  <h3><%= restaurant.name %></h3>
+                  <p>(<%= restaurant.reviews.count %>件のレビュー)</p>
+                <% end %>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>

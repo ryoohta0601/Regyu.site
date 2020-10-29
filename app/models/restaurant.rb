@@ -12,4 +12,10 @@ class Restaurant < ApplicationRecord
   validates :address, presence: true
 
   has_many :reviews
+
+  attr_accessor :average
+
+  def average_rate
+    self.reviews.average(:rate) 
+  end
 end
