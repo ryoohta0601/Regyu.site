@@ -13,6 +13,8 @@ class Restaurant < ApplicationRecord
 
   has_many :reviews
 
+  has_many :bookmarks, dependent: :destroy
+
   attr_accessor :average
 
   def average_rate

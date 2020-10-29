@@ -17,7 +17,7 @@
             <i class="fas fa-pencil-alt"></i><span>レビュー</span>
           </li>
         <% end %>
-        <%= link_to "#" do %>
+        <%= link_to bookmark_user_path(current_user) do %>
           <li>
             <i class="fas fa-bookmark"></i><span>ブックマーク</span>
           </li>
@@ -73,7 +73,11 @@
             </tr>
             <tr>
               <th>ブックマークした店</th>
-              <td>1件</td>
+              <td>
+                <%= link_to bookmark_user_path(current_user) do%>
+                  <%= @bookmark.count %>件
+                <% end %>
+              </td>
             </tr>
           </table>
         </div>
@@ -133,7 +137,11 @@
                       </svg>
                     </p>
                     <div class="user-image">
-                      <%= image_tag review.user.img.url, height: "60px", width: "60px"%>
+                      <% if @user.img.url.nil? %>
+                        <%= image_tag "no_image.png", height: "60px", width: "60px"%>
+                      <% else %>
+                        <%= image_tag @user.img.url, height: "60px", width: "60px"%>
+                      <% end %>
                     </div>
                   </div>
                 <% end %>
@@ -143,24 +151,28 @@
         <% end %>
       </div>
     </div>
-    <div class="profile-section3">
-      <div class="profile-section3__title">
-        ブックマークした店舗
-      </div>
-      <div class="bookmarks">
-        <div class="bookmarks-contents">
-          <ul>
-            <li>
-              <%= link_to "#" do%>
-                <%= image_tag "no_image.png"%>
-                <h3>niuyamanno(osaka)</h3>
-                <p>1件のレビュー</p>
+    <% if @bookmarks.exists? %>
+      <div class="profile-section3">
+        <div class="profile-section3__title">
+          ブックマークした店舗
+        </div>
+        <div class="bookmarks">
+          <div class="bookmarks-contents">
+            <ul>
+              <% @bookmarks.each do |bookmark| %>
+                <li>
+                  <%= link_to "#" do%>
+                    <%= image_tag bookmark.restaurant.img.url%>
+                    <h3><%= bookmark.restaurant.name %></h3>
+                    <p>(<%= bookmark.restaurant.reviews.count %>件のレビュー)</p>
+                  <% end %>
+                </li>
               <% end %>
-            </li>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <% end %>

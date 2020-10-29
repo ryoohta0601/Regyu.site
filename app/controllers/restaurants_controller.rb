@@ -8,6 +8,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @reviews = Review.where(restaurant_id: params[:id]).order(created_at: :desc).limit(5)
+    @bookmark = Bookmark.new
   end
 
   def new

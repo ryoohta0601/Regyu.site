@@ -16,9 +16,16 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :liked_reviews, through: :likes, source: :review
+
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_restaurants, through: :bookmarks, source: :restaurant
   
   def already_liked?(review)
     self.likes.exists?(review_id: review.id)
+  end
+
+  def bookmark_by?(restaurant)
+    self.bookmarks.exists?(restaurant_id: restaurant.id)
   end
 
   def self.guest
