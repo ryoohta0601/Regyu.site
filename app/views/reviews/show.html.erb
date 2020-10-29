@@ -101,8 +101,10 @@
         </div>
         <% end %>
         <div class="review-btn__destroy">
+        <%= link_to review_path(@review), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } do %>
           <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i>削除</button>
         </div>
+        <% end %>
         <% end %>
       </div>
     </div>
