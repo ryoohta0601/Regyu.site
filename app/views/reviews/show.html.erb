@@ -96,8 +96,10 @@
         </div>
         <% if user_signed_in? && @review.user_id == current_user.id %>
         <div class="review-btn__edit">
+        <%= link_to edit_review_path(@review) do%>
           <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i>編集</button>
         </div>
+        <% end %>
         <div class="review-btn__destroy">
           <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i>削除</button>
         </div>

@@ -3,11 +3,10 @@
 <div class="inner review-inner">
   <div class="container">
     <div class="container-review__title">
-      <i class="fas fa-edit"></i>レビューを登録する
+      <i class="fas fa-edit"></i>レビューを編集する
     </div>
     <div class="container-review__new">
       <%= form_with model: @review do |f| %>
-      <%= f.hidden_field :restaurant_id, :value => params[:restaurant_id] %>
         <table>
           <tr>
             <th>タイトル</th>
