@@ -1,0 +1,25 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner calender-inner">
+  <div class="container">
+    <div class="container-calender">
+      <div class="container-calender__title">
+        カレンダー
+      </div>
+      <div class="container-calender__contents">
+        <%= link_to 'スケジュールを入れる', new_event_path %>
+          <div class="container-calender__content">
+            <%= month_calendar events: @events do |date, events| %>
+              <%= date.day %>
+              <% events.each do |event| %>
+                <div>
+                  <%= link_to event.title, event %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>

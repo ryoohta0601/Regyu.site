@@ -1,0 +1,32 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner calender-inner">
+  <div class="container">
+    <div class="container-calender__show">
+      <div class="container-calender__show-title">
+        スケジュール詳細
+      </div>
+      <div class="container-calender__show-contents">
+        <p>
+          <strong>タイトル</strong>
+          <%= @event.title %>
+        </p>
+
+        <p>
+          <strong>時間</strong>
+          <%= @event.start_time.strftime("%Y-%m-%d %H:%M") %>
+        </p>
+
+        <p>
+          <strong>内容</strong>
+          <%= @event.content %>
+        </p>
+
+        <%= link_to 'Edit', edit_event_path(@event) %> |
+        <%= link_to 'Back', events_path %>
+        <%= link_to 'Destroy',event_path(@event), method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>
