@@ -4,17 +4,17 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def review
-    @reviews = Review.where(user_id: params[:id]).order(created_at: :desc).limit(5)
+    @reviews = Review.where(user_id: params[:id]).order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def like
     @like = Like.where(user_id: params[:id])
-    @likes = @like.includes(:review).order(created_at: :desc).limit(5)
+    @likes = @like.includes(:review).order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def bookmark
     @bookmark = Bookmark.where(user_id: params[:id])
-    @bookmarks = @bookmark.includes(:restaurant).order(created_at: :desc).limit(5)
+    @bookmarks = @bookmark.includes(:restaurant).order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def show

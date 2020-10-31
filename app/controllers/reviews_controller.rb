@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :edit, :destroy]
 
   def index
-    @reviews = Review.all.order(created_at: :desc).limit(5)
+    @reviews = Review.all.order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def show

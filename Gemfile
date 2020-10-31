@@ -86,3 +86,7 @@ gem "dotenv-rails"
 
 # calender
 gem 'simple_calendar', '~> 2.0'
+
+# pagination
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
