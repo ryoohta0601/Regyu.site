@@ -333,13 +333,9 @@
               </li>
             <% end %>
           </ul>
-          <div class="more-restaurants">
-            <%= link_to "#" do %>
-              >>もっと店舗を見る
-            <% end %>
-          </div>
         </div>
       </div>
+      <%= paginate @restaurants %>
     </div>
   </div>
 </div>

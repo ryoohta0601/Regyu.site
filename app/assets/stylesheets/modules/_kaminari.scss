@@ -1,0 +1,24 @@
+.pagination {
+  justify-content: center;
+  li{
+    letter-spacing: 0.2em;
+    a{
+      color: $color-btn;
+    }
+    a:hover{
+      opacity: 0.5;
+    }
+  }
+  .first{
+    margin-right: 5px;
+  }
+  .prev{
+    margin-right: 5px;
+  }
+  .next{
+    margin-left: 5px;
+  }
+  .last{
+    margin-left: 5px;
+  }
+}

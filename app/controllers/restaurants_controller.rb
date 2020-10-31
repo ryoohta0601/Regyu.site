@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show]
 
   def index
-    @restaurants = Restaurant.all.order(created_at: :desc).limit(6)
+    @restaurants = Restaurant.all.order(created_at: :desc).page(params[:page]).per(6)
   end
 
   def show
