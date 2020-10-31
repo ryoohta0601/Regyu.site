@@ -25,4 +25,6 @@ Rails.application.routes.draw do
   end
 
   resources :ranks, only: [:index]
+
+  resources :events
 end

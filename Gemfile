@@ -83,3 +83,6 @@ gem "geocoder"
 
 # api key
 gem "dotenv-rails"
+
+# calender
+gem 'simple_calendar', '~> 2.0'

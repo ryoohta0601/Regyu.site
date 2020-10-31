@@ -1,0 +1,39 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/nav' %>
+<div class="inner calender-inner">
+  <div class="container">
+    <div class="container-calender__show">
+      <div class="container-calender__show-title">
+        スケジュール詳細
+      </div>
+      <div class="container-calender__show-contents">
+        <table>
+            <tr>
+              <th>行く予定の店</th>
+              <td><%= @event.title %></td>
+            </tr>
+
+            <tr>
+              <th>日程</th>
+              <td><%= @event.start_time.strftime("%Y年%m月%d日 %H:%M") %></td>
+            </tr>
+
+            <tr>
+              <th>詳細</th>
+              <td><%= @event.content %></td>
+            </tr>
+          </table>
+        <%= link_to edit_event_path(@event) do%>
+          <button type="button" class="btn btn-primary">編集する</button>
+        <% end %>
+        <%= link_to event_path(@event), method: :delete, data: { confirm: '削除してもよろしいですか？' } do%>
+          <button type="button" class="btn btn-danger">削除する</button>
+        <% end %>
+        <%= link_to events_path do%>
+          <button type="button" class="btn btn-light">戻る</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'shared/footer' %>
