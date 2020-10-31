@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_user, only: [:show, :edit, :update]
+
 
   def index
-    @events = Event.all
+    @events = Event.where(user_id: current_user.id)
   end
 
   def new
@@ -13,7 +16,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    Event.create(event_parameter)
+    Event.create(event_params)
     redirect_to events_path
   end
 
@@ -29,7 +32,7 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    if @event.update(event_parameter)
+    if @event.update(event_params)
       redirect_to events_path, notice: "編集しました"
     else
       render 'edit'
@@ -38,8 +41,12 @@ class EventsController < ApplicationController
 
   private
 
-  def event_parameter
-    params.require(:event).permit(:title, :content, :start_time)
+  def set_user
+    @events = Event.where(user_id: current_user.id)
+  end
+
+  def event_params
+    params.require(:event).permit(:title, :content, :start_time).merge(user_id: current_user.id)
   end
 
 end

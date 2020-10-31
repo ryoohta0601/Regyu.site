@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :authenticate_user!, only: [:review, :edit, :update]
+  before_action :authenticate_user!, only: [:review, :like, :bookmark, :edit, :update]
   before_action :set_user, only: [:show, :edit, :update]
 
   def review
