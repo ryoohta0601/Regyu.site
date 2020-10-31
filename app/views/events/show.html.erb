@@ -7,24 +7,31 @@
         スケジュール詳細
       </div>
       <div class="container-calender__show-contents">
-        <p>
-          <strong>タイトル</strong>
-          <%= @event.title %>
-        </p>
+        <table>
+            <tr>
+              <th>行く予定の店</th>
+              <td><%= @event.title %></td>
+            </tr>
 
-        <p>
-          <strong>時間</strong>
-          <%= @event.start_time.strftime("%Y-%m-%d %H:%M") %>
-        </p>
+            <tr>
+              <th>日程</th>
+              <td><%= @event.start_time.strftime("%Y年%m月%d日 %H:%M") %></td>
+            </tr>
 
-        <p>
-          <strong>内容</strong>
-          <%= @event.content %>
-        </p>
-
-        <%= link_to 'Edit', edit_event_path(@event) %> |
-        <%= link_to 'Back', events_path %>
-        <%= link_to 'Destroy',event_path(@event), method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
+            <tr>
+              <th>詳細</th>
+              <td><%= @event.content %></td>
+            </tr>
+          </table>
+        <%= link_to edit_event_path(@event) do%>
+          <button type="button" class="btn btn-primary">編集する</button>
+        <% end %>
+        <%= link_to event_path(@event), method: :delete, data: { confirm: '削除してもよろしいですか？' } do%>
+          <button type="button" class="btn btn-danger">削除する</button>
+        <% end %>
+        <%= link_to events_path do%>
+          <button type="button" class="btn btn-light">戻る</button>
+        <% end %>
       </div>
     </div>
   </div>

@@ -93,6 +93,25 @@
         border: 1px solid rgba(0,0,0,0.125);
         margin-bottom: 20px;
         text-align: center;
+        table{
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 46px;
+          th{
+            width: 20%;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+            text-align: left;
+          }
+          td{
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 20px 10px;
+          }
+        }
+        .btn-danger{
+          margin: 15px;
+        }
       }
     }
   }
