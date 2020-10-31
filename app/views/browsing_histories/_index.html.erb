@@ -1,0 +1,24 @@
+<div class="container-reviews__section3">
+  <div class="lately-restaurants__title">
+    <i class="fas fa-store-alt"></i>最近チェックした店
+  </div>
+  <div class="lately-restaurants__contents">
+    <div class="lately-restaurant__item">
+      <% if @browsing_histories.present? %>
+        <% @browsing_histories.each do |browsing_historie| %>
+          <%= link_to restaurant_path(browsing_historie.restaurant.id) do%>
+            <div class="lately-restaurant__name">
+              <%= browsing_historie.restaurant.name %>(<%= browsing_historie.restaurant.prefecture.name %>)
+            </div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <% if user_signed_in? %>
+          <p>まだ閲覧履歴がありません</p>
+        <% else %>
+          <p>ログインすれば閲覧履歴が入ります</p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
