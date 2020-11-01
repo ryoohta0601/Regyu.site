@@ -143,17 +143,14 @@
               position: relative;
               .review-image{
                 width: 40%;
-                height: 260px;
                 img{
                   width: 100%;
                   float: left;
-                  height: 260px;
                 }
               }
               .review-show{
-                width: 58%;
+                width: 60%;
                 float: right;
-                height: 260px;
                 h3{
                   color: $color-btn;
                   font-size: 24px;
