@@ -1,5 +1,5 @@
 # Regyu.site
-![Uploading screencapture-localhost-3000-2020-11-01-18_59_33.png…]()
+![screencapture-localhost-3000-2020-11-01-18_59_33](https://user-images.githubusercontent.com/63589113/97800283-49d03580-1c77-11eb-96a4-b00baf71de58.png)
  自分が大好きな焼肉の専門レビューサイトを作りました。自分の知らない美味しい焼肉店を知りたいという強い思いで作りました。<br>
  I made a special review site for yakiniku that I love. I made it with a strong desire to know a delicious yakiniku restaurant that I do not know.<br><br>
  「Regyu.site」は、レビュー機能だけでなく、ランキング、ブックマーク、カレンダー機能などを搭載し、このサービスで自分が行きたいお店を見つけ、実際に行くまでのスケジューリングまで考えられたサービスです。<br>
