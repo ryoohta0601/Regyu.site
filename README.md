@@ -1,6 +1,6 @@
 # Regyu.site
  自分が大好きな焼肉の専門レビューサイトを作りました。自分の知らない美味しい焼肉店を知りたいという強い思いで作りました。<br>
-　I made a special review site for yakiniku that I love. I made it with a strong desire to know a delicious yakiniku restaurant that I do not know.<br>
+　I made a special review site for yakiniku that I love. I made it with a strong desire to know a delicious yakiniku restaurant that I do not know.<br><br>
  「Regyu.site」は、レビュー機能だけでなく、ランキング、ブックマーク、カレンダー機能などを搭載し、このサービスで自分が行きたいお店を見つけ、実際に行くまでのスケジューリングまで考えられたサービスです。<br>
  "Regyu.site" is equipped with not only a review function but also a ranking, bookmark, calendar function, etc., and it is a service that allows you to find the store you want to go to and schedule it until you actually go.<br>
  
