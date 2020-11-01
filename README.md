@@ -10,12 +10,13 @@
 # アプリ説明（Description）
  まずは、CRUD機能をシンプルに入れました。ほとんどは基本的な機能を意識し、その中で実際の実務や運用する上で必要な機能を少し足しました。<br>
  First of all, I added the CRUD function simply. Most of them were conscious of the basic functions, and added a few functions necessary for actual operation.<br><br>
- ・管理者画面(Administrator screen)<br>
  ・API<br>
  ・git hub<br>
  ・ページ構成(Page structure)<br>
  
 # URI
+ https://regyu-site.herokuapp.com/
+ お試しログイン機能はワンクリックでログインできます。ご自由にお使いください。<br>
 
 # 開発環境（Requirements）＆<br>各種機能（Various functions）
  Rails 6.0.3.4<br>
@@ -31,17 +32,6 @@
  レビュー（jquery.raty）<br>
  いいね、ブックマーク（Ajax）<br>
  <br>
- 
-# デモ（Demo）
-## 登録（New post action）
-![readme用_new](https://user-images.githubusercontent.com/63589113/92761820-feaf4a00-f3cc-11ea-95da-df8921629818.gif)
-## 編集（Edit action）
-![readme用_edit](https://user-images.githubusercontent.com/63589113/92758818-10dbb900-f3ca-11ea-9c27-33e542cc27f7.gif)
-## 削除（Delete action）
-![readme用_destroy](https://user-images.githubusercontent.com/63589113/92761914-1686ce00-f3cd-11ea-96be-04b45c7d135d.gif)
-
-
- 
  
  
 # データベース設計（Design DataBase scheme）
