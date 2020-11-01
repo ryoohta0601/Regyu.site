@@ -16,6 +16,7 @@
  
 # URI
  https://regyu-site.herokuapp.com/
+ お試しログイン機能はワンクリックでログインできます。ご自由にお使いください。<br>
 
 # 開発環境（Requirements）＆<br>各種機能（Various functions）
  Rails 6.0.3.4<br>
@@ -31,16 +32,6 @@
  レビュー（jquery.raty）<br>
  いいね、ブックマーク（Ajax）<br>
  <br>
- 
-# デモ（Demo）
-## 登録（New post action）
-
-## 編集（Edit action）
-
-## 削除（Delete action）
-
-
- 
  
  
 # データベース設計（Design DataBase scheme）
