@@ -93,3 +93,7 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 # search
 gem 'ransack'
+
+# admin
+gem 'cancancan'
+gem 'rails_admin', '~> 2.0.0.beta'
