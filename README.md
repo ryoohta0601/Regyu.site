@@ -17,7 +17,7 @@
  
 # URI
 
-# 開発環境（Requirements）＆各種機能（Various functions）
+# 開発環境（Requirements）＆<br>各種機能（Various functions）
  Rails 6.0.3.4<br>
  データベース（psql (PostgreSQL) 12.4）<br>
  ユーザー登録・ログイン機能（devise (4.7.3)）<br>
@@ -28,7 +28,6 @@
  カレンダー機能（simple_calendar (2.4.1)）<br>
  ページネーション（kaminari (1.2.1)）<br>
  検索機能（ransack (2.3.2)）<br>
- 管理者機能（rails_admin (2.0.2),cancancan (3.1.0),AdminLTE）<br>
  レビュー（jquery.raty）<br>
  いいね、ブックマーク（Ajax）<br>
  <br>
