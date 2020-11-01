@@ -16,6 +16,7 @@
  ・ページ構成(Page structure)<br>
  
 # URI
+ https://regyu-site.herokuapp.com/
 
 # 開発環境（Requirements）＆<br>各種機能（Various functions）
  Rails 6.0.3.4<br>
