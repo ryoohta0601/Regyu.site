@@ -58,7 +58,13 @@
                 <% @reviews.each do |review| %>
                   <li>
                     <%= link_to review_path(review) do%>
-                      <div class="review-image"><%= image_tag "IMG_2620.JPG" %></div>
+                      <div class="review-image">
+                        <% if review.images[0].nil? %>
+                          <%= image_tag "no_image.png"%>
+                        <% else %>
+                          <%= image_tag review.images[0].url %>
+                        <% end %>
+                      </div>
                       <div class="review-show">
                         <h3><%= review.restaurant.name %></h3>
                         <p class="review-subject"><%= review.title %></p>
