@@ -10,7 +10,6 @@
 # アプリ説明（Description）
  まずは、CRUD機能をシンプルに入れました。ほとんどは基本的な機能を意識し、その中で実際の実務や運用する上で必要な機能を少し足しました。<br>
  First of all, I added the CRUD function simply. Most of them were conscious of the basic functions, and added a few functions necessary for actual operation.<br><br>
- ・管理者画面(Administrator screen)<br>
  ・API<br>
  ・git hub<br>
  ・ページ構成(Page structure)<br>
