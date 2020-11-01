@@ -3,6 +3,9 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = Review.all.order(created_at: :desc).page(params[:page]).per(5)
+    if user_signed_in?
+      @browsing_histories = BrowsingHistory.where(user_id: current_user.id).order(created_at: :desc).limit(10)
+    end
   end
 
   def show
