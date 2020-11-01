@@ -45,7 +45,7 @@
  
  
  
-# Design DataBase scheme
+# データベース設計（Design DataBase scheme）
 
 ## Users
 |Column|Type|Options|
