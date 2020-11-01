@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'browsing_histories/index'
   devise_for :users, controllers: {   registrations: 'users/registrations',
                                       sessions: 'users/sessions' }
