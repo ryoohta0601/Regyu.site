@@ -6,6 +6,8 @@ class ReviewsController < ApplicationController
     if user_signed_in?
       @browsing_histories = BrowsingHistory.where(user_id: current_user.id).order(created_at: :desc).limit(10)
     end
+    @search = Review.ransack(params[:q])
+    @review = @search.result.order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def show
