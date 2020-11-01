@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
       @browsing_histories = BrowsingHistory.where(user_id: current_user.id).order(created_at: :desc).limit(10)
     end
     @search = Restaurant.ransack(params[:q])
-    @restaurant = @search.result(distinct: true).order(created_at: :desc).page(params[:page]).per(5)
+    @restaurant = @search.result.order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def show
