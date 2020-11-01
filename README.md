@@ -17,7 +17,7 @@
  
 # URI
 
-# 開発環境（Requirements）＆各種機能（Various functions）
+# 開発環境（Requirements）＆<br>各種機能（Various functions）
  Rails 6.0.3.4<br>
  データベース（psql (PostgreSQL) 12.4）<br>
  ユーザー登録・ログイン機能（devise (4.7.3)）<br>
