@@ -7,9 +7,12 @@
         <i class="fas fa-file-alt"></i>フリーワードから探す
       </div>
       <div class="freeword-search__contents">
-        <%= form_with model: @review do |f| %>
-          <%= f.text_field :name_cont, placeholder: "地名・店名", class: 'input' %>
-          <button type="submit" class="btn btn-primary">検索</button>
+        <%= search_form_for @search do |f| %>
+          <%= f.search_field :title_cont, placeholder: "タイトル・レビュー", class: 'input' %>
+          <%= f.submit do %>
+            <button type="submit" class="btn btn-primary">検索</button>
+          <% end %>
+          <%= link_to "リセット", reviews_path, class: "btn btn btn-link" %>
         <% end %>
       </div>
     </div>
@@ -23,9 +26,7 @@
             <h3 class="region-title">北海道</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  北海道
-                <% end %>
+                <%= link_to "北海道", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>1}}%>
               </li>
             </ul>
           </div>
@@ -33,34 +34,22 @@
             <h3 class="region-title">東北</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  青森県
-                <% end %>
+                <%= link_to "青森県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>2}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  岩手県
-                <% end %>
+                <%= link_to "岩手県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>3}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  宮城県
-                <% end %>
+                <%= link_to "宮城県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>4}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  秋田県
-                <% end %>
+                <%= link_to "秋田県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>5}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  山形県
-                <% end %>
+                <%= link_to "山形県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>6}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  福島県
-                <% end %>
+                <%= link_to "福島県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>7}}%>
               </li>
             </ul>
           </div>
@@ -68,39 +57,25 @@
             <h3 class="region-title">関東</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  茨城県
-                <% end %>
+                <%= link_to "茨城県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>8}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  栃木県
-                <% end %>
+                <%= link_to "栃木県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>9}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  群馬県
-                <% end %>
+                <%= link_to "群馬県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>10}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  埼玉県
-                <% end %>
+                <%= link_to "埼玉県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>11}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  千葉県
-                <% end %>
+                <%= link_to "千葉県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>12}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  東京都
-                <% end %>
+                <%= link_to "東京都", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>13}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  神奈川県
-                <% end %>
+                <%= link_to "神奈川県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>14}}%>
               </li>
             </ul>
           </div>
@@ -108,34 +83,22 @@
             <h3 class="region-title">北陸・甲信越</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  新潟県
-                <% end %>
+                <%= link_to "新潟県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>15}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  富山県
-                <% end %>
+                <%= link_to "富山県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>16}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  石川県
-                <% end %>
+                <%= link_to "石川県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>17}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  福井県
-                <% end %>
+                <%= link_to "福井県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>18}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  山梨県
-                <% end %>
+                <%= link_to "山梨県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>19}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  長野県
-                <% end %>
+                <%= link_to "長野県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>20}}%>
               </li>
             </ul>
           </div>
@@ -143,24 +106,16 @@
             <h3 class="region-title">東海</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  岐阜県
-                <% end %>
+                <%= link_to "岐阜県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>21}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  静岡県
-                <% end %>
+                <%= link_to "静岡県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>22}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  愛知県
-                <% end %>
+                <%= link_to "愛知県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>23}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  三重県
-                <% end %>
+                <%= link_to "三重県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>24}}%>
               </li>
             </ul>
           </div>
@@ -168,34 +123,22 @@
             <h3 class="region-title">関西</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  滋賀県
-                <% end %>
+                <%= link_to "滋賀県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>25}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  京都府
-                <% end %>
+                <%= link_to "京都府", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>26}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  大阪府
-                <% end %>
+                <%= link_to "大阪府", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>27}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  兵庫県
-                <% end %>
+                <%= link_to "兵庫県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>28}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  奈良県
-                <% end %>
+                <%= link_to "奈良県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>29}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  和歌山県
-                <% end %>
+                <%= link_to "和歌山県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>30}}%>
               </li>
             </ul>
           </div>
@@ -203,29 +146,19 @@
             <h3 class="region-title">中国</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  鳥取県
-                <% end %>
+                <%= link_to "鳥取県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>31}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  島根県
-                <% end %>
+                <%= link_to "島根県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>32}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  岡山県
-                <% end %>
+                <%= link_to "岡山県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>33}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  広島県
-                <% end %>
+                <%= link_to "広島県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>34}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  山口県
-                <% end %>
+                <%= link_to "山口県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>35}}%>
               </li>
             </ul>
           </div>
@@ -233,24 +166,16 @@
             <h3 class="region-title">四国</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  徳島県
-                <% end %>
+                <%= link_to "徳島県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>36}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  香川県
-                <% end %>
+                <%= link_to "香川県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>37}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  愛媛県
-                <% end %>
+                <%= link_to "愛媛県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>38}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  高知県
-                <% end %>
+                <%= link_to "高知県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>39}}%>
               </li>
             </ul>
           </div>
@@ -258,44 +183,29 @@
             <h3 class="region-title">九州・沖縄</h3>
             <ul class="region-select">
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  福岡県
-                <% end %>
+                <%= link_to "福岡県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>40}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  佐賀県
-                <% end %>
+                <%= link_to "佐賀県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>41}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  長崎県
-                <% end %>
+                <%= link_to "長崎県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>42}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  熊本県
-                <% end %>
+                <%= link_to "熊本県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>43}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  大分県
-                <% end %>
+                <%= link_to "大分県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>44}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  宮崎県
-                <% end %>
+                <%= link_to "宮崎県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>45}}%>
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  鹿児島県
-                <% end %>
+                <%= link_to "鹿児島県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>46}}%>
+
               </li>
               <li class="region-select-item">
-                <%= link_to "#" do%>
-                  沖縄県
-                <% end %>
+                <%= link_to "沖縄県", {:controller=>"restaurants",:action=>"index",:q=>{:prefecture_id_eq=>47}}%>
               </li>
             </ul>
           </div>
@@ -308,53 +218,103 @@
         <i class="fas fa-pencil-alt"></i>一覧レビュー
       </div>
       <div class="reviews__contents">
-        <% @reviews.each do |review| %>
-          <div class="review-content">
-            <ul>
-              <li>
-                <%= link_to review_path(review) do%>
-                  <div class="review-image">
-                    <% if review.images[0].nil? %>
-                      <%= image_tag "no_image.png"%>
-                    <% else %>
-                      <%= image_tag review.images[0].url %>
-                    <% end %>
-                  </div>
-                  <div class="review-show">
-                    <h3><%= review.restaurant.name %>(<%= review.restaurant.prefecture.name %>)</h3>
-                    <p class="review-subject"><%= review.title %></p>
-                    <div id="star-rate-<%= review.id %>" class="star-rate"></div>
-                    <script>
-                    $('#star-rate-<%= review.id %>').raty({
-                      size: 36,
-                      starOff:  '<%= asset_path('star-off.png') %>',
-                      starOn : '<%= asset_path('star-on.png') %>',
-                      starHalf: '<%= asset_path('star-half.png') %>',
-                      half: true,
-                      readOnly: true,
-                      score: <%= review.rate %>,
-                    });
-                    </script>
-                    <p class="review-date"><%= review.created_at.strftime('%Y.%m.%d') %></p>
-                    <p class="review-name"><%= review.user.username %>
-                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                      </svg>
-                    </p>
-                    <div class="user-image">
-                      <% if review.user.img.url.nil? %>
-                        <%= image_tag "no_image.png", height: "60px", width: "60px"%>
+        <% if params[:q].present? %>
+          <% @review.each do |review| %>
+            <div class="review-content">
+              <ul>
+                <li>
+                  <%= link_to review_path(review) do%>
+                    <div class="review-image">
+                      <% if review.images[0].nil? %>
+                        <%= image_tag "no_image.png"%>
                       <% else %>
-                        <%= image_tag review.user.img.url, height: "60px", width: "60px"%>
+                        <%= image_tag review.images[0].url %>
                       <% end %>
                     </div>
-                  </div>
-                <% end %>
-              </li>
-            </ul>
-          </div>
+                    <div class="review-show">
+                      <h3><%= review.restaurant.name %>(<%= review.restaurant.prefecture.name %>)</h3>
+                      <p class="review-subject"><%= review.title %></p>
+                      <div id="star-rate-<%= review.id %>" class="star-rate"></div>
+                      <script>
+                      $('#star-rate-<%= review.id %>').raty({
+                        size: 36,
+                        starOff:  '<%= asset_path('star-off.png') %>',
+                        starOn : '<%= asset_path('star-on.png') %>',
+                        starHalf: '<%= asset_path('star-half.png') %>',
+                        half: true,
+                        readOnly: true,
+                        score: <%= review.rate %>,
+                      });
+                      </script>
+                      <p class="review-date"><%= review.created_at.strftime('%Y.%m.%d') %></p>
+                      <p class="review-name"><%= review.user.username %>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
+                      </p>
+                      <div class="user-image">
+                        <% if review.user.img.url.nil? %>
+                          <%= image_tag "no_image.png", height: "60px", width: "60px"%>
+                        <% else %>
+                          <%= image_tag review.user.img.url, height: "60px", width: "60px"%>
+                        <% end %>
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+          <%= paginate @reviews %>
+        <% else %>
+          <% @reviews.each do |review| %>
+            <div class="review-content">
+              <ul>
+                <li>
+                  <%= link_to review_path(review) do%>
+                    <div class="review-image">
+                      <% if review.images[0].nil? %>
+                        <%= image_tag "no_image.png"%>
+                      <% else %>
+                        <%= image_tag review.images[0].url %>
+                      <% end %>
+                    </div>
+                    <div class="review-show">
+                      <h3><%= review.restaurant.name %>(<%= review.restaurant.prefecture.name %>)</h3>
+                      <p class="review-subject"><%= review.title %></p>
+                      <div id="star-rate-<%= review.id %>" class="star-rate"></div>
+                      <script>
+                      $('#star-rate-<%= review.id %>').raty({
+                        size: 36,
+                        starOff:  '<%= asset_path('star-off.png') %>',
+                        starOn : '<%= asset_path('star-on.png') %>',
+                        starHalf: '<%= asset_path('star-half.png') %>',
+                        half: true,
+                        readOnly: true,
+                        score: <%= review.rate %>,
+                      });
+                      </script>
+                      <p class="review-date"><%= review.created_at.strftime('%Y.%m.%d') %></p>
+                      <p class="review-name"><%= review.user.username %>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
+                      </p>
+                      <div class="user-image">
+                        <% if review.user.img.url.nil? %>
+                          <%= image_tag "no_image.png", height: "60px", width: "60px"%>
+                        <% else %>
+                          <%= image_tag review.user.img.url, height: "60px", width: "60px"%>
+                        <% end %>
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+          <%= paginate @reviews %>
         <% end %>
-        <%= paginate @reviews %>
       </div>
     </div>
   </div>
